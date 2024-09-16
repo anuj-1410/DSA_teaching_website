@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Serif+Text:ital@0;1&family=Nerko+One&display=swap');
+
+.outerbox{
+    display: flex;
+}
+.wel{
+    padding: 0 3% 0 3%;
+    font-size: 3rem;
+    font-family: "DM Serif Text", serif;
+    font-weight: 800;
+    font-style: normal;
+    width: fit-content;
+    margin-left: 2%;
+    border-radius: 25px;
+}
+.wel h1{
+    background-image: linear-gradient(43deg,#1B4965 0%,#62B6CB 46%,#5FA8D3 70%,#BEE9E8 100%);
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+.getStarted{
+    padding: 7% 0;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.getStartButton{
+    font-size: 30px;
+    width: max-content;
+    border: none;
+    border-radius: 15px;
+    background-image: linear-gradient(43deg,#62B6CB 0%,#5FA8D3 40%,#BEE9E8 100%);
+    font-family: "DM Serif Text", serif;
+    font-weight: 800;
+    font-style: normal;
+    list-style-type: none;
+}
+.name{
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+.wel p{
+    margin: 0;
+}
+.linkToCourses{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 30px;
+}

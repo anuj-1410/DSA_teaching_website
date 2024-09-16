@@ -1,0 +1,49 @@
+header{
+    display: flex;
+    width: 100%;
+}
+.right{
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 60%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 5px 10px;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 5px 10px;
+}
+.homeButton{
+    border: 3px solid #1B4965;
+    border-radius: 23px;
+    margin: 10px;
+}
+.aboutButton{
+    border: 3px solid #62B6CB;
+    border-radius: 23px;
+    margin: 10px;
+}
+.contactButton{
+    border: 3px solid #5FA8D3;
+    border-radius: 23px;
+    margin: 10px;
+}
+.left{
+    display: flex;
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 40%;
+}
+.left li{
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
