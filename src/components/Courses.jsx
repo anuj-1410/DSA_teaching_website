@@ -1,22 +1,16 @@
 import React from 'react'
 import { motion } from "framer-motion"
 export default function Courses() {
-    let arr = [1,2,3,4,5];
+    let arr = [[1,"Sorting"],[2,"Linked List"],[3,"Stack"],[4,"Hashing"],[5,"Binary Tree"]];
   return (
-    <div>
     <div className="outer">
     {arr.map((data)=>{
       return <motion.div
-      className='box'><center><h1>{data}</h1></center></motion.div>
+      className='box'>
+        <div className="img">{data[0]}</div>
+        <div className="text">{data[1]}</div>
+      </motion.div>
     })}
-    </div>
-  {/* <div className='outer'>
-  <motion.div 
-      animate = {{x : 235}}
-      transition={{duration:0.5}}
-  className='box'>
-  </motion.div>
-  </div> */}
     </div>
   )
 }

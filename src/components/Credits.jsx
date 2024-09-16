@@ -3,6 +3,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import './Credits.css';
 import {NavLink} from 'react-router-dom'
 import frontpage from './frontpage.png';
+
 export default function Credits(){
 
   return (
@@ -36,6 +37,7 @@ export default function Credits(){
     </motion.div>
     <div className='getStarted'>
         <img src={frontpage} alt="" height={500} width={500}/>
+        
     </div>
     </div>
     </AnimatePresence>

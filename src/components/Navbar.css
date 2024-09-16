@@ -5,7 +5,10 @@ header{
 .right{
     list-style-type: none;
     font-size: 1.2rem;
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 600;
+    font-style: normal;
     width: 60%;
     display: flex;
     justify-content: end;
@@ -37,7 +40,10 @@ header{
     display: flex;
     list-style-type: none;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
     width: 40%;
 }
 .left li{
