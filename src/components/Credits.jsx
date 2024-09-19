@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 import './Credits.css';
-import {NavLink} from 'react-router-dom'
-import frontpage from './frontpage.png';
+import {NavLink} from 'react-router-dom';
+import Lottie from 'lottie-react';
+// import frontpage from './images/frontpage.json';
+import homeAnimation from './images/homeAnimation.json';
 
 export default function Credits(){
 
@@ -36,7 +38,7 @@ export default function Credits(){
         className='getStartButton'><NavLink to={'/courses'} className={'linkToCourses'}>Get Started</NavLink></motion.li>
     </motion.div>
     <div className='getStarted'>
-        <img src={frontpage} alt="" height={500} width={500}/>
+        <Lottie animationData={homeAnimation}/>
         
     </div>
     </div>

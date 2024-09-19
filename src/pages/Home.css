@@ -11,16 +11,25 @@
     height: 400px;
     width: 330px;
     border-radius: 25px;
-    margin: 12% 1% 0 1%;
+    margin: 6% 1% 0 1%;
     /* aspect-ratio: 16/9;
     background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
     backdrop-filter: blur(10px); */
     box-shadow: 8px 8px 32px 0 rgba(0,0,0, 0.37);
+    background-size: cover;
+    background-position: -15px -55px;
+    background-repeat: no-repeat;
     overflow: hidden;
 }
 .img{
     width: 100%;
     height: 70%;
+}
+.imgSize{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
 }
 .text{
     width: 100%;
@@ -34,5 +43,13 @@
     font-weight: 600;
     font-style: normal;
     font-size: 2rem;
+}
+.typewriter{
+    text-align: center;
+    font-family: "Signika Negative", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
 }
 

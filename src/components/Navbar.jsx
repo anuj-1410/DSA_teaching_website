@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom' ;
 import './Navbar.css'
 import {motion} from "framer-motion";
-import logo from './logo.png';
+import logo from './images/logo.png';
 export default function Navbar() {
   return (
     <header>
@@ -12,7 +12,7 @@ export default function Navbar() {
         </div>
         <div className="right">
         <motion.li 
-          whileHover={{ scale: 1.1, backgroundColor : '#1B4965'}}
+          whileHover={{ scale: 1.1, backgroundColor : '#BEE9E8'}}
           whileTap={{ scale: 0.9 }}
         className='homeButton'><NavLink to={'/'} className={'link'}>Home</NavLink></motion.li>
         <motion.li 

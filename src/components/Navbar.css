@@ -7,7 +7,7 @@ header{
     font-size: 1.2rem;
     font-family: "Signika Negative", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
     width: 60%;
     display: flex;
@@ -22,7 +22,7 @@ header{
     padding: 5px 10px;
 }
 .homeButton{
-    border: 3px solid #1B4965;
+    border: 3px solid #BEE9E8;
     border-radius: 23px;
     margin: 10px;
 }
