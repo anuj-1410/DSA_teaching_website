@@ -3,39 +3,52 @@ header{
     width: 100%;
 }
 .right{
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.middle{
     list-style-type: none;
     font-size: 1.2rem;
     font-family: "Signika Negative", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    width: 60%;
+    width: 40%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     padding-right: 5px 10px;
 }
 .link{
+    
     text-decoration: none;
     color: black;
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 34px;
 }
-.homeButton{
+.active{
+    background-color: #BEE9E8;
+}
+.link-home{
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+}
+.link-courses{
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+}
+.allButtons{
+    display: flex;
+    justify-content: center;
     border: 3px solid #BEE9E8;
     border-radius: 23px;
     margin: 10px;
+    width: 60%;
+    
 }
-.aboutButton{
-    border: 3px solid #62B6CB;
-    border-radius: 23px;
-    margin: 10px;
-}
-.contactButton{
-    border: 3px solid #5FA8D3;
-    border-radius: 23px;
-    margin: 10px;
-}
+
 .left{
     display: flex;
     list-style-type: none;
@@ -44,7 +57,7 @@ header{
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    width: 40%;
+    width: 30%;
 }
 .left li{
     margin: 10px;
