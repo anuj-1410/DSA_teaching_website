@@ -22,11 +22,9 @@ header{
     padding-right: 5px 10px;
 }
 .link{
-    
     text-decoration: none;
     color: black;
     display: inline-block;
-    padding: 5px 34px;
 }
 .active{
     background-color: #BEE9E8;
@@ -34,10 +32,18 @@ header{
 .link-home{
     border-top-left-radius: 23px;
     border-bottom-left-radius: 23px;
+    flex-grow: 1;
+    text-align: center;
+}
+.link-about{
+    flex-grow: 1;
+    text-align: center;
 }
 .link-courses{
     border-top-right-radius: 23px;
     border-bottom-right-radius: 23px;
+    flex-grow: 1;
+    text-align: center;
 }
 .allButtons{
     display: flex;

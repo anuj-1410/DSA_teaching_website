@@ -32,10 +32,14 @@ export default function Credits(){
           <li>Deepanshu Nanure</li>
           </ul>
         </motion.div>
-        <motion.li 
-          whileHover={{ scale: 1.1}}
-          whileTap={{ scale: 0.9 }}
-        className='getStartButton'><NavLink to={'/courses'} className={'linkToCourses'}>Get Started</NavLink></motion.li>
+        <NavLink to={'/courses'}
+        className='link'>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }} className='getStartButton'>
+            <span className='linkToCourses'>Get Started</span>
+          </motion.div>
+        </NavLink>
     </motion.div>
     <div className='getStarted'>
         <Lottie animationData={homeAnimation}/>
