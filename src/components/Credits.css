@@ -2,15 +2,14 @@
     display: flex;
 }
 .wel{
-    padding: 0 3% 0 3%;
-    font-size: 3rem;
+    box-sizing: border-box;
+    font-size: 2.7rem;
     font-family: "Signika Negative", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    flex-grow: 1;
-    margin-left: 2%;
-    border-radius: 25px;
+    flex: 1;
+    margin : 3% 4%;
 }
 .wel h1{
     background-image: linear-gradient(43deg,#1B4965 0%,#62B6CB 46%,#5FA8D3 70%,#BEE9E8 100%);
@@ -18,14 +17,46 @@
     color: transparent;
     margin: 0;
 }
-.getStarted{
-    padding: 7% 0;
-    height: 100%;
-    flex-grow: 1;
+.animation{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    position: relative;
 }
+.bubble1, .bubble2, .bubble3, .bubble4{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: rgba(84, 210, 241, 0.68);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.7px);
+    -webkit-backdrop-filter: blur(7.7px);
+    transition: 0.3s ease;
+}
+.bubble1:hover, .bubble2:hover, .bubble3:hover, .bubble4:hover{
+    height: 100px;
+    width: 200px;
+    border-radius: 15px;
+}
+.bubble1{
+    top: 100px;
+    left: 200px;
+}
+.bubble2{
+    top: 300px;
+    right: 100px;
+}
+.bubble3{
+    top: 350px;
+    left: 50px;
+}
+.bubble4{
+    bottom: 100px;
+    left: 200px;
+}
+
 .link{
     border-radius: 15px;
 }
@@ -41,6 +72,16 @@
 .name{
     font-size: 1.5rem;
     margin-top: 20px;
+}
+.name ul{
+    list-style-type: none;
+    padding: 0;
+}
+.name li{
+    padding-left: 0;
+    /* background-color:  #CAE9FF;
+    border-radius: 15px; */
+    margin-bottom: 10px;
 }
 .wel p{
     margin: 0;

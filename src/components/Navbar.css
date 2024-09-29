@@ -1,14 +1,14 @@
-header{
+header {
     display: flex;
     width: 100%;
 }
-.right{
+.right {
     width: 30%;
     display: flex;
     justify-content: right;
     align-items: center;
 }
-.middle{
+.middle {
     list-style-type: none;
     font-size: 1.2rem;
     font-family: "Signika Negative", sans-serif;
@@ -19,43 +19,77 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 5px 10px;
 }
-.link{
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-}
-.active{
-    background-color: #BEE9E8;
-}
-.link-home{
-    border-top-left-radius: 23px;
-    border-bottom-left-radius: 23px;
-    flex-grow: 1;
-    text-align: center;
-}
-.link-about{
-    flex-grow: 1;
-    text-align: center;
-}
-.link-courses{
-    border-top-right-radius: 23px;
-    border-bottom-right-radius: 23px;
-    flex-grow: 1;
-    text-align: center;
-}
-.allButtons{
+.allButtons {
+    position: relative;
     display: flex;
     justify-content: center;
     border: 3px solid #BEE9E8;
     border-radius: 23px;
     margin: 10px;
     width: 60%;
-    
 }
+.link {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+.link-home {
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+    flex-grow: 1;
+    text-align: center;
+}
+.link-about {
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    flex-grow: 1;
+    text-align: center;
+}
+.link-courses {
+    flex-grow: 1;
+    text-align: center;
+}
+.activeLink {
+    background-color: #BEE9E8;
+}
+.link-courses:hover ~ .dropDown{
+    max-height: 400px;
+    font-size: 1.2rem;
+}
+.dropDown:hover{
+    max-height: 400px;
+    font-size: 1.2rem;
+}
+.dropDown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120%;
+    background: rgba(202, 233, 255, 0.59);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px rgba(202, 233, 255, 0.14);
+    z-index: 1000;
+    transition: 0.3s ease;
+    max-height: 0px;
+    overflow: hidden;
+    font-size: 0;
 
-.left{
+}
+.dropDown .option {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    margin: 5px 15px;
+    transition: font-size 0.1s ease;
+}
+.option:hover{
+    font-size: 1.5rem;
+}
+.left {
     display: flex;
     list-style-type: none;
     font-size: 1.2rem;
@@ -65,10 +99,7 @@ header{
     font-style: normal;
     width: 30%;
 }
-.left li{
+.left li {
     margin: 10px;
     padding: 10px;
 }
-
-
-

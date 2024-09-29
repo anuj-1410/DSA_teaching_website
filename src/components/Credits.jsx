@@ -18,11 +18,7 @@ export default function Credits(){
     transition={{duration:1}} >
       <h1>WELCOME!!!</h1>
       <p>Dive into the world of Data <br/>Structures and Algorithms with us!</p>
-        <motion.div className="name" 
-        // initial={{opacity:0}} 
-        // animate={{opacity:1}}
-        // transition={{duration:0.5}}
-         >
+        <div className="name">
         <p>The website is designed and developed by</p>
           <ul>
           <li>Abhishek Shrivastav</li>
@@ -31,7 +27,7 @@ export default function Credits(){
           <li>Aryan Patel</li>
           <li>Deepanshu Nanure</li>
           </ul>
-        </motion.div>
+        </div>
         <NavLink to={'/courses'}
         className='link'>
           <motion.div
@@ -41,9 +37,12 @@ export default function Credits(){
           </motion.div>
         </NavLink>
     </motion.div>
-    <div className='getStarted'>
-        <Lottie animationData={homeAnimation}/>
-        
+    <div className='animation'>
+        <Lottie animationData={homeAnimation} style={{height:"600px", width:"600px"}}/>
+        <div className="bubble1"></div>
+        <div className="bubble2"></div>
+        <div className="bubble3"></div>
+        <div className="bubble4"></div>
     </div>
     </div>
     </AnimatePresence>
