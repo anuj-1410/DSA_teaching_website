@@ -1,43 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { motion } from 'framer-motion';
 import logo from './images/logo.png';
+import { MdLightMode , MdDarkMode } from "react-icons/md";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { RiArrowDropUpLine } from "react-icons/ri";
 
-export default function Navbar() {
+export default function Navbar({theme}) {
+  const [isDark, setIsDark] = theme;
+  const handleTheme =()=>{
+    setIsDark(!isDark)
+    localStorage.setItem('isDarkMode', !isDark)
+  }
+
+  const [isArrowUp, setIsArrowUp] = useState(false);
+  const handleMouseEnter = () => {
+    setIsArrowUp(true);
+  };
+  const handleMouseLeave = () => {
+    setIsArrowUp(false);
+  };
+
   return (
-    <header>
+    <header className={`${isDark? 'dark': ''}`}>
       <div className="left">
         <img src={logo} alt="Logo" height={60} width={60} />
-        <li>AlgoKnot</li>
+        <p>AlgoKnot</p>
       </div>
       <div className="middle">
         <div className="allButtons">
-          <NavLink to="/" end
-            className={({ isActive }) => (isActive ? 'link-home activeLink' : 'link-home')}>
-              <motion.div whileHover={{ backgroundColor: '#BEE9E8' }} whileTap={{ scale: 0.9 }}
-              className='link-home'>
-                <span className="link">Home</span>
-              </motion.div>
-          </NavLink>
+          
+          <motion.div className={'link-home'}
+          whileHover={{backgroundColor:"var(--button-color)"}}>
+            <NavLink to="/" end className={'link'}
+            style={({isActive})=>(isActive? {color: 'var(--activeLink-color)',backgroundColor:"#BEE9E8"}:{color:'var(--text-color)'})}>
+              <span>Home</span>
+            </NavLink>
+          </motion.div>
 
-          <NavLink to="/courses"
-              className={({ isActive }) => (isActive ? 'link-courses activeLink' : 'link-courses')}>
-                <motion.div whileHover={{ backgroundColor: '#BEE9E8' }} whileTap={{ scale: 0.9 }}
-                className='link-courses'>
-                  <span className="link">Courses</span>
-                </motion.div>
-          </NavLink>
+          
+          <motion.div className={'link-courses'}
+          whileHover={{backgroundColor:"var(--button-color)"}}
+          onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <NavLink to="/courses"
+              className={"link"}
+              style={({isActive})=>(isActive? {color: 'var(--activeLink-color)',backgroundColor:"#BEE9E8"}:{color:'var(--text-color)'})}>
+                  <span>Courses</span>
+                  {isArrowUp ? <RiArrowDropUpLine className='arrow'/> : <RiArrowDropDownLine className='arrow'/> }
+            </NavLink>
+          </motion.div>
 
-          <NavLink to="/about"
-            className={({ isActive }) => (isActive ? 'link-about activeLink' : 'link-about')}>
-              <motion.div whileHover={{ backgroundColor: '#BEE9E8' }} whileTap={{ scale: 0.9 }}
-              className='link-about'>
-                <span className="link">About</span>
-              </motion.div>
-          </NavLink>
+          
+          <motion.div className={'link-about'}
+          whileHover={{backgroundColor:"var(--button-color)"}}>
+            <NavLink to="/about"
+            className={"link"}
+            style={({isActive})=>(isActive? {color: 'var(--activeLink-color)',backgroundColor:"#BEE9E8"}:{color:'var(--text-color)'})}>
+              <span>About</span>
+            </NavLink>
+          </motion.div>
         
-          <div className="dropDown">
+          <div className="dropDown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <NavLink to="" className='option'>Sorting</NavLink>
             <NavLink to="" className='option'>Linked List</NavLink>
             <NavLink to="" className='option'>Stack</NavLink>
@@ -46,7 +70,17 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="right"></div>
+      <div className="right">
+        <motion.span 
+        onTapStart={handleTheme}
+        whileTap={{x:40}}
+        className={"mode"}>
+            {isDark ? <MdLightMode className='icon'/> : <MdDarkMode className='icon'/>}
+        </motion.span>
+        <p>
+          {isDark? 'Light': 'Dark'} Mode
+        </p>
+      </div>
     </header>
   );
 }

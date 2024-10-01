@@ -7,8 +7,11 @@ import hashing from './images/hashing.png';
 import linkedList from './images/linkedList.png';
 import sorting from './images/sorting.png';
 import stack from './images/stack.png';
+import { useOutletContext } from 'react-router-dom';
 
 export default function Courses() {
+  const [isDark] = useOutletContext();
+
   const [text] = useTypewriter({
     words: [' Sorting', ' Linked List', ' Stack', ' Hashing', ' Binary Tree'],
     loop: {},
@@ -25,7 +28,7 @@ export default function Courses() {
   ];
 
   return (
-    <>
+    <div className={`outer ${isDark? 'dark': ''}`}>
       <h1 className='typewriter'>
         Let's begin your journey with
         <span style={{ color: 'green' }}>{text}</span>
@@ -33,7 +36,7 @@ export default function Courses() {
           <Cursor />
         </span>
       </h1>
-      <div className='outer'>
+      <div className='courseBoxes'>
         {arr.map((data, index) => {
           return (
             <motion.div
@@ -54,6 +57,6 @@ export default function Courses() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

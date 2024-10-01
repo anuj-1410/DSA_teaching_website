@@ -1,6 +1,8 @@
+
 header {
     display: flex;
     width: 100%;
+    height: 8%;
 }
 .right {
     width: 30%;
@@ -8,13 +10,29 @@ header {
     justify-content: right;
     align-items: center;
 }
+.right p{
+    margin-right: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: default;
+}
+.mode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 7px;
+    background-color: var(--elements-color);
+    cursor: pointer;
+}
+.icon{
+    font-size: 20px;
+    padding: 10px;
+}
 .middle {
     list-style-type: none;
-    font-size: 1.2rem;
-    font-family: "Signika Negative", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    font-size: 1.1rem;
+    font-weight: 600;
     width: 40%;
     display: flex;
     justify-content: center;
@@ -24,35 +42,41 @@ header {
     position: relative;
     display: flex;
     justify-content: center;
-    border: 3px solid #BEE9E8;
+    align-items: center;
+    border: 3px solid var(--elements-color);
     border-radius: 23px;
-    margin: 10px;
-    width: 60%;
+    width: 55%;
+    height: 50%;
 }
 .link {
+    border-radius: 23px;
     text-decoration: none;
-    color: black;
-    display: inline-block;
-}
-.link-home {
-    border-top-left-radius: 23px;
-    border-bottom-left-radius: 23px;
-    flex-grow: 1;
+    flex: 1;
+    padding: 2px 0;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
-.link-about {
-    border-top-right-radius: 23px;
-    border-bottom-right-radius: 23px;
-    flex-grow: 1;
-    text-align: center;
+.arrow{
+    font-size: 22px;
 }
+
+.link-home, .link-about {
+    border-radius: 23px;
+    flex: 1;
+    margin: 0 3px;
+    display: flex;
+}
+
 .link-courses {
-    flex-grow: 1;
-    text-align: center;
+    border-radius: 23px;
+    flex: 1;
+    display: flex;
 }
-.activeLink {
-    background-color: #BEE9E8;
+.link-courses span{
+    margin-left: 10px;
 }
+
 .link-courses:hover ~ .dropDown{
     max-height: 400px;
     font-size: 1.2rem;
@@ -92,14 +116,11 @@ header {
 .left {
     display: flex;
     list-style-type: none;
-    font-size: 1.2rem;
-    font-family: "Signika Negative", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
     width: 30%;
 }
-.left li {
+.left p {
     margin: 10px;
     padding: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
 }

@@ -1,17 +1,18 @@
 import React from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 import './Credits.css';
-import {NavLink} from 'react-router-dom';
+import {NavLink, useOutletContext} from 'react-router-dom';
 import Lottie from 'lottie-react';
 // import frontpage from './images/frontpage.json';
 import homeAnimation from './images/homeAnimation.json';
 
 export default function Credits(){
+  const [isDark] = useOutletContext();
 
   return (
 
     <AnimatePresence>
-    <div className='outerbox'>
+    <div className={`outerbox ${isDark? 'dark': ''}`}>
     <motion.div className="wel"
     initial={{opacity:0}} 
     animate={{opacity:1}} 
@@ -28,21 +29,23 @@ export default function Credits(){
           <li>Deepanshu Nanure</li>
           </ul>
         </div>
-        <NavLink to={'/courses'}
-        className='link'>
-          <motion.div
+        <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} className='getStartButton'>
-            <span className='linkToCourses'>Get Started</span>
-          </motion.div>
-        </NavLink>
+          <NavLink to={'/courses'}
+          className='linkButton'>
+            <span>Get Started</span>
+          </NavLink>
+        </motion.div>
     </motion.div>
     <div className='animation'>
-        <Lottie animationData={homeAnimation} style={{height:"600px", width:"600px"}}/>
+      <div className="aniBubble">
+        <Lottie animationData={homeAnimation} style={{height:"700px", width:"700px"}}/>
         <div className="bubble1"></div>
         <div className="bubble2"></div>
         <div className="bubble3"></div>
         <div className="bubble4"></div>
+      </div>
     </div>
     </div>
     </AnimatePresence>
