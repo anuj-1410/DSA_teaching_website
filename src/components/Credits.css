@@ -35,26 +35,26 @@
     -webkit-backdrop-filter: blur(7.3px);
     transition: 0.3s ease;
 }
-.bubble1:hover, .bubble2:hover, .bubble3:hover, .bubble4:hover{
-    height: 100px;
-    width: 200px;
-    border-radius: 15px;
-}
+
 .bubble1{
-    top: 100px;
-    left: 150px;
+    top: 120px;
+    left: 180px;
+    text-align: center;
 }
 .bubble2{
     top: 200px;
-    right: 90px;
+    right: 120px;
+    text-align: center;
 }
 .bubble3{
     top: 300px;
     left: 40px;
+    text-align: center;
 }
 .bubble4{
-    bottom: 50px;
+    bottom: 70px;
     left: 200px;
+    text-align: center;
 }
 
 .linkButton{
@@ -63,7 +63,7 @@
     height: 100%;
     width: 100%;
     flex-grow: 1;
-    color: black;
+    color: var(--buttonText-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,8 @@
 .getStartButton{
     font-size: 30px;
     border-radius: 15px;
-    background-image: linear-gradient(43deg,#62B6CB 0%,#5FA8D3 40%,#BEE9E8 100%);
+    background-image: var(--gradient-color);
+    border: var(--border);
     font-weight: 600;
     width: 200px;
     height: 70px;
@@ -92,4 +93,67 @@
 }
 .wel p{
     margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .outerbox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wel {
+        font-size: 2rem;
+        text-align: center;
+        margin: 2% 2%;
+    }
+
+    .animation {
+        margin-top: 20px;
+    }
+
+    .aniBubble {
+        width: 100%;
+        height: auto;
+    }
+
+    .bubble1, .bubble2, .bubble3, .bubble4 {
+        height: 40px;
+        width: 40px;
+    }
+
+    .bubble1:hover, .bubble2:hover, .bubble3:hover, .bubble4:hover {
+        height: 80px;
+        width: 160px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .outerbox {
+        flex-direction: row;
+    }
+
+    .wel {
+        font-size: 2.5rem;
+        margin: 3% 3%;
+    }
+
+    .animation {
+        margin-top: 0;
+    }
+
+    .aniBubble {
+        width: 80%;
+        height: auto;
+    }
+
+    .bubble1, .bubble2, .bubble3, .bubble4 {
+        height: 50px;
+        width: 50px;
+    }
+
+    .bubble1:hover, .bubble2:hover, .bubble3:hover, .bubble4:hover {
+        height: 90px;
+        width: 180px;
+    }
 }

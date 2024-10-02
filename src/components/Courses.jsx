@@ -2,14 +2,15 @@ import React from 'react';
 import './Courses.css';
 import { motion } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import binaryTree from './images/binaryTree.png';
-import hashing from './images/hashing.png';
-import linkedList from './images/linkedList.png';
-import sorting from './images/sorting.png';
-import stack from './images/stack.png';
+import binaryTree from '../images/binaryTree.png';
+import hashing from '../images/hashing.png';
+import linkedList from '../images/linkedList.png';
+import sorting from '../images/sorting.png';
+import stack from '../images/stack.png';
 import { useOutletContext } from 'react-router-dom';
 
 export default function Courses() {
+  
   const [isDark] = useOutletContext();
 
   const [text] = useTypewriter({
@@ -30,8 +31,8 @@ export default function Courses() {
   return (
     <div className={`outer ${isDark? 'dark': ''}`}>
       <h1 className='typewriter'>
-        Let's begin your journey with
-        <span style={{ color: 'green' }}>{text}</span>
+        Let's upgrade your skills with
+        <span style={{ color: '#386FA4' }}>{text}</span>
         <span>
           <Cursor />
         </span>

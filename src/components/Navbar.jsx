@@ -9,6 +9,15 @@ import { RiArrowDropUpLine } from "react-icons/ri";
 
 export default function Navbar({theme}) {
   const [isDark, setIsDark] = theme;
+
+  React.useEffect(() => {
+    if (isDark) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [isDark]);
+
   const handleTheme =()=>{
     setIsDark(!isDark)
     localStorage.setItem('isDarkMode', !isDark)
@@ -26,13 +35,13 @@ export default function Navbar({theme}) {
     <header className={`${isDark? 'dark': ''}`}>
       <div className="left">
         <img src={logo} alt="Logo" height={60} width={60} />
-        <p>AlgoKnot</p>
+        <p>CodeMatrix</p>
       </div>
       <div className="middle">
         <div className="allButtons">
           
           <motion.div className={'link-home'}
-          whileHover={{backgroundColor:"var(--button-color)"}}>
+          whileHover={{backgroundColor:"var(--hover-color)"}}>
             <NavLink to="/" end className={'link'}
             style={({isActive})=>(isActive? {color: 'var(--activeLink-color)',backgroundColor:"#BEE9E8"}:{color:'var(--text-color)'})}>
               <span>Home</span>
@@ -41,7 +50,7 @@ export default function Navbar({theme}) {
 
           
           <motion.div className={'link-courses'}
-          whileHover={{backgroundColor:"var(--button-color)"}}
+          whileHover={{backgroundColor:"var(--hover-color)"}}
           onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <NavLink to="/courses"
               className={"link"}
@@ -53,7 +62,7 @@ export default function Navbar({theme}) {
 
           
           <motion.div className={'link-about'}
-          whileHover={{backgroundColor:"var(--button-color)"}}>
+          whileHover={{backgroundColor:"var(--hover-color)"}}>
             <NavLink to="/about"
             className={"link"}
             style={({isActive})=>(isActive? {color: 'var(--activeLink-color)',backgroundColor:"#BEE9E8"}:{color:'var(--text-color)'})}>

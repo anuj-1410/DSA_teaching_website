@@ -90,23 +90,18 @@ header {
     flex-direction: column;
     position: absolute;
     top: 120%;
-    background: rgba(202, 233, 255, 0.59);
+    background-color: var(--hover-color);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.6px);
-    -webkit-backdrop-filter: blur(6.6px);
-    border: 1px rgba(202, 233, 255, 0.14);
     z-index: 1000;
     transition: 0.3s ease;
     max-height: 0px;
     overflow: hidden;
     font-size: 0;
-
 }
 .dropDown .option {
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: var(--text-color);
     margin: 5px 15px;
     transition: font-size 0.1s ease;
 }
