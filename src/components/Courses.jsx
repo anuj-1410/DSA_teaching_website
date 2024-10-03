@@ -7,11 +7,12 @@ import hashing from '../images/hashing.png';
 import linkedList from '../images/linkedList.png';
 import sorting from '../images/sorting.png';
 import stack from '../images/stack.png';
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, useNavigate } from 'react-router-dom';
 
 export default function Courses() {
   
   const [isDark] = useOutletContext();
+  const navigate = useNavigate();
 
   const [text] = useTypewriter({
     words: [' Sorting', ' Linked List', ' Stack', ' Hashing', ' Binary Tree'],
@@ -21,15 +22,19 @@ export default function Courses() {
   });
 
   let arr = [
-    [sorting, 'Sorting'],
-    [linkedList, 'Linked List'],
-    [stack, 'Stack'],
-    [hashing, 'Hashing'],
-    [binaryTree, 'Binary Tree'],
+    { image: sorting, name: 'Sorting', path: 'sorting' },
+    { image: linkedList, name: 'Linked List', path: 'linkedList' },
+    { image: stack, name: 'Stack', path: 'stack' },
+    { image: hashing, name: 'Hashing', path: 'hashing' },
+    { image: binaryTree, name: 'Binary Tree', path: 'binaryTree' },
   ];
 
+  const handleBoxClick = (path) => {
+    navigate(`/course/${path}`);
+  };
+
   return (
-    <div className={`outer ${isDark? 'dark': ''}`}>
+    <div className={`outer ${isDark ? 'dark' : ''}`}>
       <h1 className='typewriter'>
         Let's upgrade your skills with
         <span style={{ color: '#386FA4' }}>{text}</span>
@@ -43,17 +48,18 @@ export default function Courses() {
             <motion.div
               key={index}
               whileTap={{ scale: 0.8 }}
-              whileHover={{scale:0.9}}
+              whileHover={{ scale: 0.9 }}
               className='box'
+              onClick={() => handleBoxClick(data.path)}
             >
               <div className='img'>
                 <motion.img
                   className='imgSize'
-                  src={data[0]}
-                  alt='random'
+                  src={data.image}
+                  alt={data.name}
                 />
               </div>
-              <div className='text'>{data[1]}</div>
+              <div className='text'>{data.name}</div>
             </motion.div>
           );
         })}

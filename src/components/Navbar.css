@@ -3,6 +3,7 @@ header {
     display: flex;
     width: 100%;
     height: 8%;
+    background-color: var(--background-color);
 }
 .right {
     width: 30%;
@@ -25,7 +26,7 @@ header {
     background-color: var(--elements-color);
     cursor: pointer;
 }
-.icon{
+.icon-mode{
     font-size: 20px;
     padding: 10px;
 }
@@ -48,7 +49,7 @@ header {
     width: 55%;
     height: 50%;
 }
-.link {
+.link-common {
     border-radius: 23px;
     text-decoration: none;
     flex: 1;

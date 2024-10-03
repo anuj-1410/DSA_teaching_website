@@ -1,6 +1,7 @@
 .outerbox{
     display: flex;
     height: 92%;
+    margin-top: 70px;
 }
 .wel{
     box-sizing: border-box;

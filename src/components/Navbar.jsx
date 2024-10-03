@@ -32,7 +32,7 @@ export default function Navbar({theme}) {
   };
 
   return (
-    <header className={`${isDark? 'dark': ''}`}>
+    <header className={`${isDark? 'dark': ''}`} style={{position:"fixed",top:0}}>
       <div className="left">
         <img src={logo} alt="Logo" height={60} width={60} />
         <p>CodeMatrix</p>
@@ -42,7 +42,7 @@ export default function Navbar({theme}) {
           
           <motion.div className={'link-home'}
           whileHover={{backgroundColor:"var(--hover-color)"}}>
-            <NavLink to="/" end className={'link'}
+            <NavLink to="/" end className={'link-common'}
             style={({isActive})=>(isActive? {color: 'var(--activeLink-color)',backgroundColor:"#BEE9E8"}:{color:'var(--text-color)'})}>
               <span>Home</span>
             </NavLink>
@@ -53,7 +53,7 @@ export default function Navbar({theme}) {
           whileHover={{backgroundColor:"var(--hover-color)"}}
           onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <NavLink to="/courses"
-              className={"link"}
+              className={"link-common"}
               style={({isActive})=>(isActive? {color: 'var(--activeLink-color)',backgroundColor:"#BEE9E8"}:{color:'var(--text-color)'})}>
                   <span>Courses</span>
                   {isArrowUp ? <RiArrowDropUpLine className='arrow'/> : <RiArrowDropDownLine className='arrow'/> }
@@ -64,7 +64,7 @@ export default function Navbar({theme}) {
           <motion.div className={'link-about'}
           whileHover={{backgroundColor:"var(--hover-color)"}}>
             <NavLink to="/about"
-            className={"link"}
+            className={"link-common"}
             style={({isActive})=>(isActive? {color: 'var(--activeLink-color)',backgroundColor:"#BEE9E8"}:{color:'var(--text-color)'})}>
               <span>About</span>
             </NavLink>
@@ -84,7 +84,7 @@ export default function Navbar({theme}) {
         onTapStart={handleTheme}
         whileTap={{x:40}}
         className={"mode"}>
-            {isDark ? <MdLightMode className='icon'/> : <MdDarkMode className='icon'/>}
+            {isDark ? <MdLightMode className='icon-mode'/> : <MdDarkMode className='icon-mode'/>}
         </motion.span>
         <p>
           {isDark? 'Light': 'Dark'} Mode

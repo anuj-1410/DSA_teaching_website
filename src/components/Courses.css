@@ -1,6 +1,7 @@
 .outer{
     height: 92%;
     box-sizing: border-box;
+    margin-top: 100px;
 }
 
 .courseBoxes{
