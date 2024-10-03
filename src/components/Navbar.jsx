@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { motion } from 'framer-motion';
-import logo from './images/logo.png';
+import logo from '../images/logo.png';
 import { MdLightMode , MdDarkMode } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
