@@ -34,7 +34,7 @@ main{
     padding: 10px 15px;
     gap: 15px;
     transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    text-decoration: none;
+    cursor: pointer;
 }
 .link-bar:hover{
     transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
