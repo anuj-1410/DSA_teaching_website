@@ -1,7 +1,7 @@
 
 .container-outer{
     display:flex;
-    margin-top: 70px;
+    margin-top: 8.5vh;
 }
 main{
     width: 100%;
@@ -10,10 +10,12 @@ main{
 .sidebar{
     background: #62B6CB;
     color: #fff;
-    height: 100vh;
+    height: 91.5vh;
     width: 200px;
     transition: all 0.5s;
-    position: fixed;
+    border-radius: 0 15px 15px 0;
+    position: sticky;
+    top: 8.5vh;
 }
 .top_section{
     display: flex;
