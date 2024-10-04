@@ -1,11 +1,10 @@
-
-header {
+header{
     display: flex;
     width: 100%;
     height: 8%;
     background-color: var(--background-color);
 }
-.right {
+.right{
     width: 30%;
     display: flex;
     justify-content: right;
@@ -109,10 +108,15 @@ header {
 .option:hover{
     font-size: 1.5rem;
 }
+.dropDown:has(.option:hover){
+    max-height: 400px;
+    font-size: 1.2rem;
+}
 .left {
     display: flex;
     list-style-type: none;
     width: 30%;
+    cursor: default;
 }
 .left p {
     margin: 10px;

@@ -18,18 +18,11 @@ export default function Credits() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <h1>WELCOME!!!</h1>
-          <p>Dive into the world of Data <br />Structures and Algorithms with us!</p>
-          <div className="name">
-            <p>The website is designed and developed by</p>
-            <ul>
-              <li>Abhishek Shrivastav</li>
-              <li>Anshul Parate</li>
-              <li>Anuj Agrawal</li>
-              <li>Aryan Patel</li>
-              <li>Deepanshu Nanure</li>
-            </ul>
+          <div className="text-home">
+            <h1>WELCOME!!!</h1>
+            <motion.p>Dive into the world<br/>of Data Structures<br />and Algorithms with us!</motion.p>
           </div>
+          
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}

@@ -7,7 +7,8 @@ import {
     FaCommentAlt,
     FaShoppingBag,
     FaThList
-} from "react-icons/fa";
+} 
+from "react-icons/fa";
 import Aim from '../pages/Aim.jsx';
 import Pretest from '../pages/Pretest.jsx';
 import Concept from '../pages/Concept.jsx';
@@ -18,13 +19,15 @@ import Posttest from '../pages/Posttest.jsx';
 import './Sidebarmain.css';
 
 const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     const [showBarContent, setShowBarContent] = useState(0);
+    const [activeIndex, setActiveIndex]= useState(0);
 
     const toggle = () => setIsOpen(!isOpen);
 
     const handleShowBarContent = (index) => {
         setShowBarContent(index);
+        setActiveIndex(index);
     }
 
     const content = () => {
@@ -59,9 +62,14 @@ const Sidebar = () => {
                         <FaBars onClick={toggle} />
                     </div>
                 </div>
+                
                 {
                     menuItem.map((item, index) => (
-                        <div key={index} className="link-bar" onClick={() => handleShowBarContent(index)}>
+                        <div 
+                            key={index} 
+                            className={`link-bar ${activeIndex === index ? 'active' : ''}`} 
+                            onClick={() => handleShowBarContent(index)}
+                        >
                             <div className="icon">{item.icon}</div>
                             <div style={{ display: isOpen ? "block" : "none" }} className="link_text">{item.name}</div>
                         </div>

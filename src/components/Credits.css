@@ -1,11 +1,11 @@
 .outerbox{
     display: flex;
     height: 92%;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 .wel{
     box-sizing: border-box;
-    font-size: 2.7rem;
+    font-size: 3rem;
     font-weight: 600;
     flex: 1;
     margin : 3% 4%;
@@ -15,6 +15,11 @@
     background-clip: text;
     color: transparent;
     margin: 0;
+}
+.text-home p{
+    margin: 0;
+    font-size: 4rem;
+    padding: 0;
 }
 .animation{
     display: flex;
@@ -34,7 +39,7 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.3px);
     -webkit-backdrop-filter: blur(7.3px);
-    transition: 0.3s ease;
+    cursor: default;
 }
 
 .bubble1{
@@ -77,24 +82,9 @@
     font-weight: 600;
     width: 200px;
     height: 70px;
+    margin-top: 100px;
 }
-.name{
-    font-size: 1.5rem;
-    margin-top: 20px;
-}
-.name ul{
-    list-style-type: none;
-    padding: 0;
-}
-.name li{
-    padding-left: 0;
-    /* background-color:  #CAE9FF;
-    border-radius: 15px; */
-    margin-bottom: 10px;
-}
-.wel p{
-    margin: 0;
-}
+
 
 
 @media (max-width: 768px) {

@@ -8,7 +8,7 @@ const Bubble = ({ className, content }) => {
   const handleMouseEnter = () => {
     const timeout = setTimeout(() => {
       setShowContent(true);
-    }, 400);
+    }, 300);
     setHoverTimeout(timeout);
   };
 
@@ -23,12 +23,12 @@ const Bubble = ({ className, content }) => {
       whileHover={{ height: '100px', width: '200px', borderRadius: '15px' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      transition={{ duration: 0.1 }}
+      transition={{ duration: 0.3 }}
     >
       {showContent && 
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
         {content}
-        </motion.p>}
+      </motion.p>}
     </motion.div>
   );
 };
