@@ -8,16 +8,16 @@ import {
     FaShoppingBag,
     FaThList
 } from "react-icons/fa";
-import Aim from '../pages/Aim.jsx';
-import Pretest from '../pages/Pretest.jsx';
-import Concept from '../pages/Concept.jsx';
-import Learning from '../pages/Learning.jsx';
-import Demo from '../pages/Demo.jsx';
-import Quiz from '../pages/Quiz.jsx';
-import Posttest from '../pages/Posttest.jsx';
+import Aim from './Aim.jsx';
+import Pretest from './Pretest.jsx';
+import Concept from './Concept.jsx';
+import Learning from './Learning.jsx';
+import Demo from './Demo.jsx';
+import Quiz from './Quiz.jsx';
+import Posttest from './Posttest.jsx';
 import './Sidebarmain.css';
 
-const Sidebar = () => {
+const Sidebar_Hashing = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [showBarContent, setShowBarContent] = useState(0);
     const [activeIndex, setActiveIndex]= useState(0);
@@ -92,4 +92,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default Sidebar_Hashing;
