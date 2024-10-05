@@ -20,7 +20,11 @@ export default function Credits() {
         >
           <div className="text-home">
             <h1>WELCOME!!!</h1>
-            <motion.p>Dive into the world<br/>of Data Structures<br />and Algorithms with us!</motion.p>
+            <p style={{marginTop:"10px"}}>Dive into the world<br/>of <span style={{color:"#62B6CB"}}>Data Structures
+               </span><br />and <span style={{color:"#62B6CB"}}>Algorithms</span> with us!</p>
+            <p style={{fontSize:"1.6rem",marginTop:"20px"}}>
+            Invest in your future and build a robust and reliable foundation for your programming career now.
+            </p>
           </div>
           
           <motion.div

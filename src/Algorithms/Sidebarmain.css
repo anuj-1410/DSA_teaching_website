@@ -13,8 +13,8 @@ main {
     color: #fff;
     height: 91.5vh;
     width: 200px;
-    transition: all 0.5s;
-    border-radius: 0 15px 15px 0;
+    transition: width 0.5s ease;
+    border-radius: 0 17px 17px 0;
     position: sticky;
     top: 8.5vh;
 }
@@ -23,16 +23,19 @@ main {
     display: flex;
     align-items: center;
     padding: 20px 15px;
+    transition: all 0.5s ease;
 }
 
 .logo {
     font-size: 30px;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    color:#1B4965 ;
 }
 
 .bars {
     display: flex;
     font-size: 25px;
-    margin-left: 50px;
 }
 
 .link-bar {
@@ -40,7 +43,7 @@ main {
     color: #fff;
     padding: 10px 15px;
     gap: 15px;
-    transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: all 0.5s ease;
     cursor: pointer;
 }
 

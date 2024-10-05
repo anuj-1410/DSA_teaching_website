@@ -8,9 +8,9 @@
   .question-block {
     margin-bottom: 20px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: var(--border-quiz);
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: var(--quiz-bgcolor);
   }
   
   h3 {
@@ -26,22 +26,28 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: var(--border-quiz);
     border-radius: 4px;
-    background-color: #fff;
-    transition: background-color 0.3s ease;
+    background-color: var(--quiz-label);
   }
   
   .option-label input {
     margin-right: 10px;
   }
   
+  .option-label:has(input[type="radio"]:checked){
+    border: 3px solid;
+    border-color: var(--quiz-selected);
+  }
+  
   .option-label.correct {
     background-color: #c8e6c9;
+    color: black;
   }
   
   .option-label.incorrect {
     background-color: #ffcdd2;
+    color: black;
   }
   
   .result {
@@ -61,12 +67,12 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007bff;
-    color: white;
+    background-color: #BEE9E8;
+    color: black;
     transition: background-color 0.3s ease;
   }
   
   .submit-btn:hover, .reset-btn:hover {
-    background-color: #0056b3;
+    background-color: #92bdbc;
   }
   

@@ -8,17 +8,17 @@ import {
     FaShoppingBag,
     FaThList
 } from "react-icons/fa";
-import Aim from '../pages/Aim.jsx';
-import Pretest from '../pages/Pretest.jsx';
-import Concept from '../pages/Concept.jsx';
-import Learning from '../pages/Learning.jsx';
-import Demo from '../pages/Demo.jsx';
-import Quiz from '../pages/Quiz.jsx';
-import Posttest from '../pages/Posttest.jsx';
-import './Sidebarmain.css';
+import Aim from './Aim.jsx';
+import Pretest from './Pretest.jsx';
+import Concept from './Concept.jsx';
+import Learning from './Learning.jsx';
+import Demo from './Demo.jsx';
+import Quiz from './Quiz.jsx';
+import Posttest from './Posttest.jsx';
+import '../Sidebarmain.css';
 
-const Sidebar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+const Sidebar_LinkedList = () => {
+    const [isOpen, setIsOpen] = useState(true);
     const [showBarContent, setShowBarContent] = useState(0);
     const [activeIndex, setActiveIndex]= useState(0);
     const [textVisible, setTextVisible] = useState(true);
@@ -68,8 +68,8 @@ const Sidebar = () => {
         <div className="container-outer">
             <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
                 <div className="top_section">
-                    <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">Logo</h1>
-                    <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
+                    <h1 style={{ display: textVisible && isOpen ? "block" : "none", opacity: textVisible ? 1 : 0 }} className="logo">Linked List</h1>
+                    <div style={{ marginLeft: textVisible && isOpen ? "40px" : "0px" }} className="bars">
                         <FaBars onClick={toggle} />
                     </div>
                 </div>
@@ -92,4 +92,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default Sidebar_LinkedList;

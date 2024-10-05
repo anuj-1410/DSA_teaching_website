@@ -11,7 +11,7 @@
     margin : 3% 4%;
 }
 .wel h1{
-    background-image: linear-gradient(43deg,#1B4965 0%,#62B6CB 16%,#5FA8D3 70%,#BEE9E8 100%);
+    background-image: linear-gradient(45deg,#1B4965 ,#62B6CB ,#5FA8D3 ,#BEE9E8 );
     background-clip: text;
     color: transparent;
     margin: 0;
@@ -82,7 +82,7 @@
     font-weight: 600;
     width: 200px;
     height: 70px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 

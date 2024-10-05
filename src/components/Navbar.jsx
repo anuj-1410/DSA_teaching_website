@@ -71,11 +71,11 @@ export default function Navbar({theme}) {
           </motion.div>
         
           <div className="dropDown" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <NavLink to="" className='option'>Sorting</NavLink>
-            <NavLink to="" className='option'>Linked List</NavLink>
-            <NavLink to="" className='option'>Stack</NavLink>
-            <NavLink to="" className='option'>Hashing</NavLink>
-            <NavLink to="" className='option'>Binary Tree</NavLink>
+            <NavLink to="/courses/sorting" className='option'>Sorting</NavLink>
+            <NavLink to="/courses/linkedList" className='option'>Linked List</NavLink>
+            <NavLink to="/courses/stack" className='option'>Stack</NavLink>
+            <NavLink to="/courses/hashing" className='option'>Hashing</NavLink>
+            <NavLink to="/courses/binaryTree" className='option'>Binary Tree</NavLink>
           </div>
         </div>
       </div>

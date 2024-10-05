@@ -15,10 +15,10 @@ import Learning from './Learning.jsx';
 import Demo from './Demo.jsx';
 import Quiz from './Quiz.jsx';
 import Posttest from './Posttest.jsx';
-import './Sidebarmain.css';
+import '../Sidebarmain.css';
 
-const Sidebar_Sorting = () => {
-    const [isOpen, setIsOpen] = useState(false);
+const Sidebar_BinaryTree = () => {
+    const [isOpen, setIsOpen] = useState(true);
     const [showBarContent, setShowBarContent] = useState(0);
     const [activeIndex, setActiveIndex]= useState(0);
     const [textVisible, setTextVisible] = useState(true);
@@ -67,12 +67,13 @@ const Sidebar_Sorting = () => {
     return (
         <div className="container-outer">
             <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
-                <div className="top_section">
-                    <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">Logo</h1>
-                    <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
-                        <FaBars onClick={toggle} />
-                    </div>
+            <div className="top_section">
+                <h1 style={{ display: textVisible && isOpen ? "block" : "none", opacity: textVisible ? 1 : 0 }} className="logo">Binary Tree</h1>
+                <div style={{ marginLeft: textVisible && isOpen ? "40px" : "0px" }} className="bars">
+                    <FaBars onClick={toggle} />
                 </div>
+            </div>
+
                 
                 {
                     menuItem.map((item, index) => (
@@ -92,4 +93,4 @@ const Sidebar_Sorting = () => {
     );
 };
 
-export default Sidebar_Sorting;
+export default Sidebar_BinaryTree;

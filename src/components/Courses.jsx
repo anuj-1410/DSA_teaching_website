@@ -30,7 +30,7 @@ export default function Courses() {
   ];
 
   const handleBoxClick = (path) => {
-    navigate(`/course/${path}`);
+    navigate(`/courses/${path}`);
   };
 
   return (
