@@ -17,6 +17,7 @@ body {
     --quiz-label : #fff;
     --border-quiz :1px solid #ddd;
     --quiz-selected : #1B4965;
+    --navbar-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
@@ -39,6 +40,7 @@ body.dark {
     --quiz-label : #00303D;
     --border-quiz :1px solid #00607A;
     --quiz-selected : #BEE9E8;
+    --navbar-shadow: #004052 0px 1px 4px;
     background-color: var(--background-color);
     color: var(--text-color);
 }
