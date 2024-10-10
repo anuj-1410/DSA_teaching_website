@@ -57,7 +57,9 @@ main {
     background: #CAE9FF;
     color: #1B4965;
 }
-
-.icon, .link_text {
+.link_text {
     font-size: 20px;
+}
+.icon{
+    font-size: 23px;
 }

@@ -65,14 +65,19 @@
     background-color: var(--elements-color);
     padding: 5px;
     border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .suggestion div{
     height:20px;
     width:20px;
-    background-color: black;
-    rotate: 45;
-    position: relative;
+    background-color: var(--elements-color);
+    rotate: 45deg;
+    position: absolute;
     bottom: -10px;
+    z-index: -1;
 }
 
 .linkButton{

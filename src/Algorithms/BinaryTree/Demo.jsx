@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './Demo.css';
 
-// Define a TreeNode class for the binary tree structure
 class TreeNode {
   constructor(value) {
     this.value = value;
@@ -97,9 +96,9 @@ const BinaryTree = () => {
     setFoundNode(found);
   };
 
-  const drawNode = (ctx, node, x, y, xOffset) => {
+  const drawNode = useCallback((ctx, node, x, y, xOffset) => {
     if (!node) return;
-
+  
     if (foundNode && foundNode.value === node.value) {
       ctx.fillStyle = 'lightgreen';
       ctx.beginPath();
@@ -112,34 +111,35 @@ const BinaryTree = () => {
       ctx.arc(x, y, 20, 0, 2 * Math.PI);
       ctx.stroke();
     }
-
+  
     ctx.font = '15px Arial';
     ctx.fillText(node.value, x - 5, y + 5);
-
+  
     if (node.left) {
       ctx.moveTo(x, y);
       ctx.lineTo(x - xOffset, y + 60);
       ctx.stroke();
       drawNode(ctx, node.left, x - xOffset, y + 60, xOffset / 2);
     }
-
+  
     if (node.right) {
       ctx.moveTo(x, y);
       ctx.lineTo(x + xOffset, y + 60);
       ctx.stroke();
       drawNode(ctx, node.right, x + xOffset, y + 60, xOffset / 2);
     }
-  };
+  }, [foundNode]);
+  
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+  
     if (root) {
       drawNode(ctx, root, canvas.width / 2, 40, canvas.width / 4);
     }
-  }, [root, foundNode]);
+  }, [root, foundNode, drawNode]);  
 
   return (
     <div className="container">

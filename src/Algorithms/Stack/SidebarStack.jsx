@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import {
-    FaTh,
-    FaBars,
-    FaUserAlt,
-    FaRegChartBar,
-    FaCommentAlt,
-    FaShoppingBag,
-    FaThList
-} from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+import { MdLibraryBooks } from "react-icons/md";
+import { AiOutlineAim } from "react-icons/ai";
+import { MdOutlineOndemandVideo } from "react-icons/md";
+import { MdQuestionAnswer } from "react-icons/md";
+import { MdAnimation } from "react-icons/md";
+import { RiQuestionnaireFill } from "react-icons/ri";
+import { MdQuiz } from "react-icons/md";
 import Aim from './Aim.jsx';
 import Pretest from './Pretest.jsx';
 import Concept from './Concept.jsx';
@@ -55,13 +54,13 @@ const Sidebar_Stack = () => {
     };
 
     const menuItem = [
-        { path: `aim`, name: "Aim", icon: <FaTh /> },
-        { path: `pretest`, name: "Pretest", icon: <FaUserAlt /> },
-        { path: `learning`, name: "Learning", icon: <FaRegChartBar /> },
-        { path: `concept`, name: "Concept", icon: <FaCommentAlt /> },
-        { path: `demo`, name: "Demo", icon: <FaShoppingBag /> },
-        { path: `quiz`, name: "Quiz", icon: <FaThList /> },
-        { path: `posttest`, name: "Posttest", icon: <FaThList /> }
+        { path: `aim`, name: "Aim", icon: <AiOutlineAim /> },
+        { path: `pretest`, name: "Pretest", icon: <RiQuestionnaireFill /> },
+        { path: `learning`, name: "Learning", icon: <MdOutlineOndemandVideo /> },
+        { path: `concept`, name: "Concept", icon: <MdLibraryBooks /> },
+        { path: `demo`, name: "Demo", icon: <MdAnimation /> },
+        { path: `quiz`, name: "Quiz", icon: <MdQuiz /> },
+        { path: `posttest`, name: "Posttest", icon: <MdQuestionAnswer /> }
     ];
     
     return (

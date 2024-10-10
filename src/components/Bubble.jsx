@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Bubble = ({ className, content, icon }) => {
+const Bubble = ({ className, content, icon, sugg }) => { 
   const [showContent, setShowContent] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
+  const [ , setShowSuggestion] = sugg;
 
   const handleMouseEnter = () => {
     const timeout = setTimeout(() => {
       setShowContent(true);
     }, 300);
     setHoverTimeout(timeout);
+    setShowSuggestion(false);
   };
 
   const handleMouseLeave = () => {

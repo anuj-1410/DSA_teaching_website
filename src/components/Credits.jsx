@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import './Credits.css';
 import { NavLink, useOutletContext } from 'react-router-dom';
@@ -13,13 +13,6 @@ import { MdQuiz } from "react-icons/md";
 export default function Credits() {
   const [isDark] = useOutletContext();
   const [showSuggestion, setShowSuggestion] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSuggestion(false);
-    }, 4000);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <AnimatePresence>
@@ -56,10 +49,10 @@ export default function Credits() {
             <div></div>
             </div>}
             <Lottie animationData={homePageAnimation} style={{ height: '700px', width: '700px' }} />
-            <Bubble className="bubble1" content="Master DSA Concepts in One Video" icon={<FaYoutube size={90}/>} />
-            <Bubble className="bubble2" content="Visualize Data Structures in Action" icon={<MdAnimation size={90} />} />
-            <Bubble className="bubble3" content="Quiz Yourself for Better Practice" icon={<MdQuiz size={90} />} />
-            <Bubble className="bubble4" content="Learn from Experienced Guides" icon={<FaChalkboardTeacher size={90} />} />
+            <Bubble className="bubble1" content="Master DSA Concepts in One Video" icon={<FaYoutube size={90}/>} sugg={[showSuggestion, setShowSuggestion]} />
+            <Bubble className="bubble2" content="Visualize Data Structures in Action" icon={<MdAnimation size={90} />} sugg={[showSuggestion, setShowSuggestion]} />
+            <Bubble className="bubble3" content="Quiz Yourself for Better Practice" icon={<MdQuiz size={90} />} sugg={[showSuggestion, setShowSuggestion]} />
+            <Bubble className="bubble4" content="Learn from Experienced Guides" icon={<FaChalkboardTeacher size={90} />} sugg={[showSuggestion, setShowSuggestion]} />
           </div>
         </div>
       </div>
