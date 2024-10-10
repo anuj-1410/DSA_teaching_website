@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.headerstack {
+    height: 100px; /* Reduced height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px; /* Reduced gap */
+}
+
+.heading {
+    color: rgb(62, 237, 208);
+    font-size: 24px; /* Adjusted font size */
+    font-family: 'Poppins', sans-serif;
+}
+
+.containerstack {
+    height: 600px; /* Adjusted height */
+    width: 800px; /* Adjusted width */
+    background-color: white;
+    box-shadow: 8px 8px 20px rgb(110, 86, 86);
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 20px auto; /* Centered with margin */
+    padding: 20px; /* Added padding for spacing */
+}
+
+.container-header {
+    height: 70px; /* Reduced height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Reduced gap */
+    margin-bottom: 15px; /* Adjusted margin */
+}
+
+.container-header input {
+    height: 40px; /* Reduced height */
+    width: 300px; /* Adjusted width */
+    font-size: 20px; /* Reduced font size */
+    border-radius: 10px;
+    padding-left: 10px; /* Adjusted padding */
+}
+
+.push,
+.pop,
+.reset,
+.boxstack {
+    height: 40px; /* Reduced height */
+    width: 120px; /* Adjusted width */
+    font-size: 20px; /* Reduced font size */
+    background-color: rgb(150, 240, 248);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+}
+
+.container-header button:active {
+    transform: scale(0.95);
+}
+
+.container-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.stack {
+    width: 300px; /* Reduced width */
+    height: 400px; /* Adjusted height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black; /* Combined border styles */
+}
+
+.main-stack-bucket {
+    height: 370px; /* Adjusted height */
+    width: 160px; /* Adjusted width */
+    border: 4px solid black; /* Combined border styles */
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+.ele {
+    height: 60px; /* Reduced height */
+    width: 140px; /* Reduced width */
+    background-color: rgb(151, 244, 236);
+    color: white;
+    border: 3px solid black; /* Adjusted border */
+    border-radius: 10px;
+    font-size: 20px; /* Reduced font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ele-add {
+    animation: pushAnimation 0.3s infinite linear;
+}
+
+.info {
+    height: 400px; /* Adjusted height */
+    width: 300px; /* Adjusted width */
+    padding-left: 10px; /* Adjusted padding */
+}
+
+.sec1, .sec2, .sec3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px; /* Reduced margin */
+    justify-content: space-between;
+}
+
+.sec1 h3, .sec2 h3, .sec3 h3 {
+    font-size: 16px; /* Reduced font size */
+}
+
+.boxstack {
+    height: 30px; /* Reduced height for boxes */
+    width: 80px; /* Reduced width */
+    font-size: 16px; /* Reduced font size */
+    background-color: rgb(150, 240, 248);
+    color: white;
+    border-radius: 5px; /* Slightly smaller border radius */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.massage-boxstack {
+    height: 150px; /* Adjusted height */
+    width: 300px; /* Adjusted width */
+    margin-top: 20px; /* Adjusted margin */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.massage-boxstack h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.massage {
+    height: 120px; /* Adjusted height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px; /* Adjusted font size */
+}
+
+.error-massage {
+    animation: errorMassage 0.4s infinite linear;
+}
+
+@keyframes errorMassage {
+    0% {
+        background-color: bisque;
+    }
+    100% {
+        background-color: rgb(166, 243, 239);
+    }
+}
+

@@ -1,0 +1,172 @@
+/* AboutUs.css */
+.mainmaincontainer {
+    body {
+      background-color: #f0f8ff; /* Light background */
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    }
+    .main-container {
+      display: flex;
+      height: 100vh; /* Full viewport height */
+    }
+    
+    .about-us-section {
+      flex: 0 0 60%; /* 60% width for About Us */
+      padding: 20px;
+      background-color: #aceeee; /* Bright blue background */
+      color: rgb(0, 0, 0); /* Text color for contrast */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align items to the left */
+      position: relative;
+    }
+    
+    .about-us-heading {
+      background-color:  #dbf8fb; /* Dark blue background */
+      padding: 20px;
+      border-radius: 8px; /* Rounded corners */
+      width: 30%;
+      height: 3.5%;
+      margin-bottom: 20px; /* Space below the header */
+      font-size: 2em;
+      font-weight: bold;
+    }
+    
+    .about-us-text {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    
+    .educate-line {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInUp 2s forwards; /* Animate appearance */
+      background-color:  #dbf8fb; /* Dark blue background */
+      padding: 20px;
+      border-radius: 8px; /* Rounded corners */
+      margin-bottom: 20px; /* Space below the header */
+      font-size: 1em;
+      font-weight: bold;
+    }
+    
+    .team {
+      background-color:  #dbf8fb; /* Dark blue background */
+      padding: 20px;
+      border-radius: 8px; /* Rounded corners */
+      
+      margin-bottom: 20px; /* Space below the header */
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    
+    .teamlottie {
+      position: relative;
+      left: 450px;
+      bottom: 400px;
+    }
+    
+    .content {
+      text-align: left; /* Align text to the left */
+      margin-bottom: 40px;
+      font-size: 1em;
+      font-weight: bold;
+    }
+    
+    .contactus-section {
+      flex: 0 0 40%; /* 40% width for Contact Us */
+      padding: 20px;
+      background-color: #dbf8fb; /* Lighter blue for contrast */
+      color: #000000; /* Text color */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align items to the left */
+    }
+    
+    .contactus-header {
+      display: flex;
+      justify-content: space-between; /* Space between heading and Lottie */
+      align-items: center; /* Center vertically */
+      width: 100%; /* Full width */
+    }
+    
+    .contactus-heading {
+      background-color: #aceeee; /* Dark blue background */
+      padding: 20px;
+      border-radius: 8px; /* Rounded corners */
+      width: 40%; /* Full width */
+      margin-bottom: 20px; /* Space below the header */
+      font-size: 2em;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+    
+    
+    
+    
+    
+    
+    .email {
+      margin-top: 100px; /* Push email section to the bottom */
+      margin-left: 20px;
+    }
+    
+    .lottie-container {
+    
+      margin-left: 450px;
+    }
+    
+    button {
+      background-color: #ffffff; /* Button background */
+      color: #1e90ff; /* Text color */
+      border: none; /* No border */
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%; /* Make button full width */
+    }
+    
+    button:hover {
+      background-color: #1e90ff; /* Change on hover */
+      color: #ffffff; /* Text color change on hover */
+    }
+    
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    .contact-info {
+      background-color: #dbf8fb; /* Lighter blue for the box */
+      padding: 30px;
+      border-radius: 15px; /* Rounded corners */
+      margin-top: 20px; /* Space above the box */
+      border: 1px solid rgb(41, 224, 221); /* Black border */
+      max-width: 450px; /* Set a maximum width for the table */
+      width: 100%; /* Make it responsive */
+    }
+    
+    .contact-row {
+      border-bottom: 1px solid rgb(61, 222, 225); /* Border between rows */
+      padding: 10px 0; /* Padding above and below each row */
+      display: flex; /* Flex display for icon and text */
+      align-items: center; /* Center items vertically */
+    }
+    
+    .contact-row:last-child {
+      border-bottom: none; /* Remove border for the last row */
+    }
+    
+    .contact-row a {
+      color: #389481; /* Default color */
+      text-decoration: none; /* Remove underline */
+    }
+    
+    .contact-row a:hover {
+      color: darkblue; /* Change color on hover */
+    }
+    
+    
