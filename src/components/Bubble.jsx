@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Bubble = ({ className, content }) => {
+const Bubble = ({ className, content, icon }) => {
   const [showContent, setShowContent] = useState(false);
   const [hoverTimeout, setHoverTimeout] = useState(null);
 
@@ -26,9 +26,12 @@ const Bubble = ({ className, content }) => {
       transition={{ duration: 0.3 }}
     >
       {showContent && 
-      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
+      <div style={{display:"flex", alignItems:"center", margin:"5px 15px"}}>
+      {icon}
+      <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }} style={{marginLeft:"15px"}}>
         {content}
-      </motion.p>}
+      </motion.p>
+      </div>}
     </motion.div>
   );
 };

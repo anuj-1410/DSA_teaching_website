@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import './Credits.css';
 import { NavLink, useOutletContext } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import homePageAnimation from '../images/homePageAnimation.json';
 import Bubble from './Bubble';
+import { FaYoutube } from "react-icons/fa";
+import { MdAnimation } from "react-icons/md";
+import { FaChalkboardTeacher } from "react-icons/fa";
+import { MdQuiz } from "react-icons/md";
 
 export default function Credits() {
   const [isDark] = useOutletContext();
+  const [showSuggestion, setShowSuggestion] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSuggestion(false);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -39,11 +51,15 @@ export default function Credits() {
         </motion.div>
         <div className="animation">
           <div className="aniBubble">
+            {showSuggestion && 
+            <div className="suggestion">Know more!
+            <div></div>
+            </div>}
             <Lottie animationData={homePageAnimation} style={{ height: '700px', width: '700px' }} />
-            <Bubble className="bubble1" content="Hello Everyone" />
-            <Bubble className="bubble2" content="Welcome to our site" />
-            <Bubble className="bubble3" content="Explore our courses" />
-            <Bubble className="bubble4" content="Join us now" />
+            <Bubble className="bubble1" content="Master DSA Concepts in One Video" icon={<FaYoutube size={90}/>} />
+            <Bubble className="bubble2" content="Visualize Data Structures in Action" icon={<MdAnimation size={90} />} />
+            <Bubble className="bubble3" content="Quiz Yourself for Better Practice" icon={<MdQuiz size={90} />} />
+            <Bubble className="bubble4" content="Learn from Experienced Guides" icon={<FaChalkboardTeacher size={90} />} />
           </div>
         </div>
       </div>

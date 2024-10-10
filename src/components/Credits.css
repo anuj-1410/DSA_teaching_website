@@ -45,22 +45,34 @@
 .bubble1{
     top: 120px;
     left: 180px;
-    text-align: center;
 }
 .bubble2{
     top: 200px;
     right: 120px;
-    text-align: center;
 }
 .bubble3{
     top: 300px;
     left: 40px;
-    text-align: center;
 }
 .bubble4{
     bottom: 70px;
     left: 200px;
-    text-align: center;
+}
+.suggestion{
+    position: absolute;
+    top: 70px;
+    left: 165px;
+    background-color: var(--elements-color);
+    padding: 5px;
+    border-radius: 3px;
+}
+.suggestion div{
+    height:20px;
+    width:20px;
+    background-color: black;
+    rotate: 45;
+    position: relative;
+    bottom: -10px;
 }
 
 .linkButton{
