@@ -4,6 +4,7 @@ header{
     height: 8%;
     background-color: var(--background-color);
     box-shadow: var(--navbar-shadow);
+    z-index: 500;
 }
 .right{
     width: 30%;

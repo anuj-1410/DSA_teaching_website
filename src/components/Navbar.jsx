@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import { motion } from 'framer-motion';
-import logo from '../images/logo.png';
+import logo2 from '../images/logo2.png';
 import { MdLightMode , MdDarkMode } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { RiArrowDropUpLine } from "react-icons/ri";
@@ -34,8 +34,8 @@ export default function Navbar({theme}) {
   return (
     <header className={`${isDark? 'dark': ''}`} style={{position:"fixed",top:0}}>
       <div className="left">
-        <img src={logo} alt="Logo" height={60} width={60} />
-        <p>CodeMatrix</p>
+        <img src={logo2} alt="Logo" height={60} width={60} style={{marginLeft:"10px"}}/>
+        <p style={{marginLeft:"0px"}}>CodeMatrix</p>
       </div>
       <div className="middle">
         <div className="allButtons">

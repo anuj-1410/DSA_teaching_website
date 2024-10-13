@@ -3,16 +3,15 @@ import './AboutUs.css';
 import { ContactUs } from './ContactUs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faPhone } from '@fortawesome/free-solid-svg-icons';
-import '@lottiefiles/lottie-player'; // Import Lottie Player
+import '@lottiefiles/lottie-player';
 
 const AboutUs = () => {
   const [messageSent, setMessageSent] = useState(false);
 
   const handleSendMessage = () => {
-    // Simulate sending a message
     setMessageSent(true);
     setTimeout(() => {
-      setMessageSent(false); // Hide message after 3 seconds
+      setMessageSent(false);
     }, 3000);
   };
 

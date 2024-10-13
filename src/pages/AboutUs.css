@@ -1,34 +1,32 @@
 /* AboutUs.css */
 .mainmaincontainer {
-    body {
-      background-color: #f0f8ff; /* Light background */
-      font-family: Arial, sans-serif;
-      margin: 0;
-    }
-    }
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    margin-top: 60px;
+}
     .main-container {
       display: flex;
-      height: 100vh; /* Full viewport height */
+      height: 100vh;
     }
     
     .about-us-section {
-      flex: 0 0 60%; /* 60% width for About Us */
+      flex: 62%;
       padding: 20px;
-      background-color: #aceeee; /* Bright blue background */
-      color: rgb(0, 0, 0); /* Text color for contrast */
+      background-color: #aceeee;
+      color: rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Align items to the left */
-      position: relative;
+      align-items: flex-start;
     }
     
     .about-us-heading {
-      background-color:  #dbf8fb; /* Dark blue background */
+      background-color:  #dbf8fb;
       padding: 20px;
-      border-radius: 8px; /* Rounded corners */
+      border-radius: 8px;
       width: 30%;
       height: 3.5%;
-      margin-bottom: 20px; /* Space below the header */
+      margin-bottom: 20px;
       font-size: 2em;
       font-weight: bold;
     }
@@ -39,7 +37,6 @@
     }
     
     .educate-line {
-      font-size: 1.5em;
       margin-bottom: 20px;
       opacity: 0;
       animation: fadeInUp 2s forwards; /* Animate appearance */
@@ -54,9 +51,8 @@
     .team {
       background-color:  #dbf8fb; /* Dark blue background */
       padding: 20px;
-      border-radius: 8px; /* Rounded corners */
-      
-      margin-bottom: 20px; /* Space below the header */
+      border-radius: 8px;
+      margin-bottom: 20px;
       font-size: 1.5em;
       font-weight: bold;
     }
@@ -75,7 +71,7 @@
     }
     
     .contactus-section {
-      flex: 0 0 40%; /* 40% width for Contact Us */
+      flex: 38%;
       padding: 20px;
       background-color: #dbf8fb; /* Lighter blue for contrast */
       color: #000000; /* Text color */
@@ -86,7 +82,6 @@
     
     .contactus-header {
       display: flex;
-      justify-content: space-between; /* Space between heading and Lottie */
       align-items: center; /* Center vertically */
       width: 100%; /* Full width */
     }
@@ -101,11 +96,6 @@
       font-weight: bold;
       margin-left: 20px;
     }
-    
-    
-    
-    
-    
     
     .email {
       margin-top: 100px; /* Push email section to the bottom */
