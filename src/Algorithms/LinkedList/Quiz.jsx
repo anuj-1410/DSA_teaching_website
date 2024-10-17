@@ -4,105 +4,105 @@ import '../Quiz.css';
 const questions = [
   {
     id: 1,
-    question: "What is the main goal of double hashing in DSA?",
+    question: "What is the primary advantage of using a linked list over an array?",
     options: [
-      { id: 'a', text: "To reduce time complexity", isCorrect: false },
-      { id: 'b', text: "To avoid collisions", isCorrect: true },
-      { id: 'c', text: "To optimize space usage", isCorrect: false },
-      { id: 'd', text: "To increase memory usage", isCorrect: false }
+      { id: 'a', text: "Faster access time", isCorrect: false },
+      { id: 'b', text: "Dynamic size", isCorrect: true },
+      { id: 'c', text: "Easier sorting", isCorrect: false },
+      { id: 'd', text: "Simpler implementation", isCorrect: false }
     ]
   },
   {
     id: 2,
-    question: "Double hashing uses how many hash functions?",
+    question: "In a singly linked list, each node contains:",
     options: [
-      { id: 'a', text: "1", isCorrect: false },
-      { id: 'b', text: "2", isCorrect: true },
-      { id: 'c', text: "3", isCorrect: false },
-      { id: 'd', text: "4", isCorrect: false }
+      { id: 'a', text: "Data and a pointer to the next node", isCorrect: true },
+      { id: 'b', text: "Data and pointers to both the next and previous nodes", isCorrect: false },
+      { id: 'c', text: "Only data", isCorrect: false },
+      { id: 'd', text: "A pointer to the head node", isCorrect: false }
     ]
   },
   {
     id: 3,
-    question: "What is the formula for double hashing?",
+    question: "What is the time complexity for inserting a node at the beginning of a linked list?",
     options: [
-      { id: 'a', text: "h(key) = (h1(key) + h2(key)) % table_size", isCorrect: false },
-      { id: 'b', text: "h(key) = (h1(key) + i * h2(key)) % table_size", isCorrect: true },
-      { id: 'c', text: "h(key) = (h1(key) * h2(key)) % table_size", isCorrect: false },
-      { id: 'd', text: "h(key) = (h1(key) + i * h1(key)) % table_size", isCorrect: false }
-    ]
-  },
-  {
-    id: 4,
-    question: "What is a key benefit of double hashing?",
-    options: [
-      { id: 'a', text: "It provides better clustering", isCorrect: false },
-      { id: 'b', text: "It provides efficient memory allocation", isCorrect: false },
-      { id: 'c', text: "It reduces clustering", isCorrect: true },
-      { id: 'd', text: "It reduces the need for rehashing", isCorrect: false }
-    ]
-  },
-  {
-    id: 5,
-    question: "In double hashing, the second hash function should be chosen such that it is:",
-    options: [
-      { id: 'a', text: "Divisible by the table size", isCorrect: false },
-      { id: 'b', text: "A power of 2", isCorrect: false },
-      { id: 'c', text: "Relatively prime to the table size", isCorrect: true },
-      { id: 'd', text: "Smaller than the table size", isCorrect: false }
-    ]
-  },
-  {
-    id: 6,
-    question: "What is the time complexity of double hashing?",
-    options: [
-      { id: 'a', text: "O(n)", isCorrect: false },
-      { id: 'b', text: "O(1)", isCorrect: true },
+      { id: 'a', text: "O(1)", isCorrect: true },
+      { id: 'b', text: "O(n)", isCorrect: false },
       { id: 'c', text: "O(log n)", isCorrect: false },
       { id: 'd', text: "O(n^2)", isCorrect: false }
     ]
   },
   {
-    id: 7,
-    question: "What is the primary reason for using double hashing over linear probing?",
+    id: 4,
+    question: "Which of the following operations can be performed in O(1) time on a linked list?",
     options: [
-      { id: 'a', text: "It speeds up insertion", isCorrect: false },
-      { id: 'b', text: "It reduces clustering", isCorrect: true },
-      { id: 'c', text: "It increases memory efficiency", isCorrect: false },
-      { id: 'd', text: "It reduces time complexity", isCorrect: false }
+      { id: 'a', text: "Searching for an element", isCorrect: false },
+      { id: 'b', text: "Inserting at the head", isCorrect: true },
+      { id: 'c', text: "Deleting a specific node", isCorrect: false },
+      { id: 'd', text: "Accessing the middle element", isCorrect: false }
+    ]
+  },
+  {
+    id: 5,
+    question: "In a doubly linked list, each node has:",
+    options: [
+      { id: 'a', text: "One pointer", isCorrect: false },
+      { id: 'b', text: "Three pointers", isCorrect: false },
+      { id: 'c', text: "Two pointers", isCorrect: true },
+      { id: 'd', text: "No pointers", isCorrect: false }
+    ]
+  },
+  {
+    id: 6,
+    question: "How can you determine the length of a linked list?",
+    options: [
+      { id: 'a', text: "Direct access", isCorrect: false },
+      { id: 'b', text: "Using a built-in function", isCorrect: false },
+      { id: 'c', text: "By counting the pointers", isCorrect: false },
+      { id: 'd', text: "Iterating through the list", isCorrect: true }
+    ]
+  },
+  {
+    id: 7,
+    question: "What is a circular linked list?",
+    options: [
+      { id: 'a', text: "A list where nodes are sorted in a circular order", isCorrect: false },
+      { id: 'b', text: "A list that can change direction", isCorrect: false },
+      { id: 'c', text: "A linked list with no nodes", isCorrect: false },
+      { id: 'd', text: "A list where the last node points to the first node", isCorrect: true }
     ]
   },
   
   {
     id: 8,
-    question: "Which of the following is a requirement for the second hash function in double hashing?",
+    question: "When deleting a node from a linked list, what must you be careful to update?",
     options: [
-      { id: 'a', text: "It must return a constant value", isCorrect: false },
-      { id: 'b', text: "It must return an even number", isCorrect: false },
-      { id: 'c', text: "It must be independent of the first hash function", isCorrect: true },
-      { id: 'd', text: "It must be equal to the table size", isCorrect: false }
+      { id: 'a', text: "Only the node's data", isCorrect: false },
+      { id: 'b', text: "The size of the list", isCorrect: false },
+      { id: 'c', text: "The pointers of the previous and next nodes", isCorrect: true },
+      { id: 'd', text: "The head of the list only", isCorrect: false }
     ]
   },
   
   {
     id: 9,
-    question: "What happens if the second hash function in double hashing is not relatively prime to the table size?",
+    question: "Which of the following is NOT a type of linked list?",
     options: [
-      { id: 'a', text: "It will result in fewer probes", isCorrect: false },
-      { id: 'b', text: "It will result in the same performance as linear probing", isCorrect: true },
-      { id: 'c', text: "It will optimize space usage", isCorrect: false },
-      { id: 'd', text: "It will reduce time complexity", isCorrect: false }
+      { id: 'a', text: "Singly linked list", isCorrect: false },
+      { id: 'b', text: "Doubly linked list", isCorrect: false },
+      { id: 'c', text: "Circular linked list", isCorrect: false },
+      { id: 'd', text: "Indexed linked list", isCorrect: true }
     ]
   },
   
   {
     id: 10,
-    question: "Double hashing helps minimize collisions by:",
+    question: "In a linked list, if a node points to NULL, what does that indicate?",
     options: [
-      { id: 'a', text: "Generating two random hash values", isCorrect: false },
-      { id: 'b', text: "Using two different hash functions for probing", isCorrect: true },
-      { id: 'c', text: "Avoiding rehashing", isCorrect: false },
-      { id: 'd', text: "Utilizing fixed memory space", isCorrect: false }
+      { id: 'a', text: "It is the last node", isCorrect: true },
+      { id: 'b', text: "It is an empty list", isCorrect: false },
+      { id: 'c', text: "There is an error in the list", isCorrect: false },
+      { id: 'd', text: "It is the head node", isCorrect: false }
     ]
   }
 ];
