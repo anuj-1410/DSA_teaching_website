@@ -44,8 +44,8 @@ const Sidebar_BinaryTree = () => {
         switch (showBarContent) {
             case 0: return <Aim />;
             case 1: return <Pretest />;
-            case 2: return <Concept />;
-            case 3: return <Learning />;
+            case 2: return <Learning />;
+            case 3: return <Concept />;
             case 4: return <Demo />;
             case 5: return <Quiz />;
             case 6: return <Posttest />;
