@@ -107,21 +107,21 @@
       margin-left: 450px;
     }
     
-    button {
-      background-color: #ffffff; /* Button background */
-      color: #1e90ff; /* Text color */
-      border: none; /* No border */
+    /* .button-contact {
+      background-color: #ffffff;
+      color: #1e90ff;
+      border: none;
       padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
-      width: 100%; /* Make button full width */
-    }
+      width: 100%;
+    } */
     
-    button:hover {
-      background-color: #1e90ff; /* Change on hover */
-      color: #ffffff; /* Text color change on hover */
-    }
+    /* .button-contact:hover {
+      background-color: #1e90ff;
+      color: #ffffff;
+    } */
     
     /* Animation Keyframes */
     @keyframes fadeInUp {

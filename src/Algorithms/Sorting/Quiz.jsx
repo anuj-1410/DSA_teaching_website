@@ -4,108 +4,156 @@ import '../Quiz.css';
 const questions = [
   {
     id: 1,
-    question: "What is the main goal of double hashing in DSA?",
+    question: "What is the main principle behind Quick Sort?",
     options: [
-      { id: 'a', text: "To reduce time complexity", isCorrect: false },
-      { id: 'b', text: "To avoid collisions", isCorrect: true },
-      { id: 'c', text: "To optimize space usage", isCorrect: false },
-      { id: 'd', text: "To increase memory usage", isCorrect: false }
+      { id: 'a', text: "Divide and conquer", isCorrect: true },
+      { id: 'b', text: "Greedy method", isCorrect: false },
+      { id: 'c', text: "Dynamic programming", isCorrect: false },
+      { id: 'd', text: "Brute force", isCorrect: false }
     ]
   },
   {
     id: 2,
-    question: "Double hashing uses how many hash functions?",
+    question: "What is a common way to select a pivot in Quick Sort?",
     options: [
-      { id: 'a', text: "1", isCorrect: false },
-      { id: 'b', text: "2", isCorrect: true },
-      { id: 'c', text: "3", isCorrect: false },
-      { id: 'd', text: "4", isCorrect: false }
+      { id: 'a', text: "First element", isCorrect: false },
+      { id: 'b', text: "Random element", isCorrect: true },
+      { id: 'c', text: "Median element", isCorrect: true },
+      { id: 'd', text: "Last element", isCorrect: false }
     ]
   },
   {
     id: 3,
-    question: "What is the formula for double hashing?",
+    question: "What is the average time complexity of Quick Sort?",
     options: [
-      { id: 'a', text: "h(key) = (h1(key) + h2(key)) % table_size", isCorrect: false },
-      { id: 'b', text: "h(key) = (h1(key) + i * h2(key)) % table_size", isCorrect: true },
-      { id: 'c', text: "h(key) = (h1(key) * h2(key)) % table_size", isCorrect: false },
-      { id: 'd', text: "h(key) = (h1(key) + i * h1(key)) % table_size", isCorrect: false }
+      { id: 'a', text: "O(n)", isCorrect: false },
+      { id: 'b', text: "O(n log n)", isCorrect: true },
+      { id: 'c', text: "O(n^2)", isCorrect: false },
+      { id: 'd', text: "O(log n)", isCorrect: false }
     ]
   },
   {
     id: 4,
-    question: "What is a key benefit of double hashing?",
+    question: "In which scenario does Quick Sort have its worst-case performance?",
     options: [
-      { id: 'a', text: "It provides better clustering", isCorrect: false },
-      { id: 'b', text: "It provides efficient memory allocation", isCorrect: false },
-      { id: 'c', text: "It reduces clustering", isCorrect: true },
-      { id: 'd', text: "It reduces the need for rehashing", isCorrect: false }
+      { id: 'a', text: "When the array is nearly sorted", isCorrect: false },
+      { id: 'b', text: "When the array is sorted in reverse order", isCorrect: true },
+      { id: 'c', text: "When the pivot is the median", isCorrect: false },
+      { id: 'd', text: "When all elements are the same", isCorrect: false }
     ]
   },
   {
     id: 5,
-    question: "In double hashing, the second hash function should be chosen such that it is:",
+    question: "What is the worst-case time complexity of Quick Sort?",
     options: [
-      { id: 'a', text: "Divisible by the table size", isCorrect: false },
-      { id: 'b', text: "A power of 2", isCorrect: false },
-      { id: 'c', text: "Relatively prime to the table size", isCorrect: true },
-      { id: 'd', text: "Smaller than the table size", isCorrect: false }
+      { id: 'a', text: "O(n log n)", isCorrect: false },
+      { id: 'b', text: "O(n^2)", isCorrect: true },
+      { id: 'c', text: "O(n)", isCorrect: false },
+      { id: 'd', text: "O(log n)", isCorrect: false }
     ]
   },
   {
     id: 6,
-    question: "What is the time complexity of double hashing?",
+    question: "Which of the following is a characteristic of Quick Sort?",
     options: [
-      { id: 'a', text: "O(n)", isCorrect: false },
-      { id: 'b', text: "O(1)", isCorrect: true },
-      { id: 'c', text: "O(log n)", isCorrect: false },
-      { id: 'd', text: "O(n^2)", isCorrect: false }
+      { id: 'a', text: "It is a stable sort", isCorrect: false },
+      { id: 'b', text: "It is an in-place sort", isCorrect: true },
+      { id: 'c', text: "It requires O(n) additional space", isCorrect: false },
+      { id: 'd', text: "It sorts linked lists efficiently", isCorrect: false }
     ]
   },
   {
     id: 7,
-    question: "What is the primary reason for using double hashing over linear probing?",
+    question: "What happens during the partitioning step in Quick Sort?",
     options: [
-      { id: 'a', text: "It speeds up insertion", isCorrect: false },
-      { id: 'b', text: "It reduces clustering", isCorrect: true },
-      { id: 'c', text: "It increases memory efficiency", isCorrect: false },
-      { id: 'd', text: "It reduces time complexity", isCorrect: false }
+      { id: 'a', text: "The array is divided into two equal halves", isCorrect: false },
+      { id: 'b', text: "Elements are rearranged around the pivot", isCorrect: true },
+      { id: 'c', text: "All elements are sorted", isCorrect: false },
+      { id: 'd', text: "Elements are merged together", isCorrect: false }
     ]
   },
-  
   {
     id: 8,
-    question: "Which of the following is a requirement for the second hash function in double hashing?",
+    question: "Which of the following is a common optimization for Quick Sort?",
     options: [
-      { id: 'a', text: "It must return a constant value", isCorrect: false },
-      { id: 'b', text: "It must return an even number", isCorrect: false },
-      { id: 'c', text: "It must be independent of the first hash function", isCorrect: true },
-      { id: 'd', text: "It must be equal to the table size", isCorrect: false }
+      { id: 'a', text: "Switching to insertion sort for small arrays", isCorrect: true },
+      { id: 'b', text: "Always choosing the last element as pivot", isCorrect: false },
+      { id: 'c', text: "Using a linked list instead of an array", isCorrect: false },
+      { id: 'd', text: "Sorting in reverse order", isCorrect: false }
     ]
   },
-  
   {
     id: 9,
-    question: "What happens if the second hash function in double hashing is not relatively prime to the table size?",
+    question: "What does it mean for Quick Sort to be 'in-place'?",
     options: [
-      { id: 'a', text: "It will result in fewer probes", isCorrect: false },
-      { id: 'b', text: "It will result in the same performance as linear probing", isCorrect: true },
-      { id: 'c', text: "It will optimize space usage", isCorrect: false },
-      { id: 'd', text: "It will reduce time complexity", isCorrect: false }
+      { id: 'a', text: "It does not require extra memory for sorting", isCorrect: true },
+      { id: 'b', text: "It uses multiple arrays", isCorrect: false },
+      { id: 'c', text: "It is not efficient", isCorrect: false },
+      { id: 'd', text: "It only sorts small datasets", isCorrect: false }
     ]
   },
-  
   {
     id: 10,
-    question: "Double hashing helps minimize collisions by:",
+    question: "In Quick Sort, when is the base case of recursion reached?",
     options: [
-      { id: 'a', text: "Generating two random hash values", isCorrect: false },
-      { id: 'b', text: "Using two different hash functions for probing", isCorrect: true },
-      { id: 'c', text: "Avoiding rehashing", isCorrect: false },
-      { id: 'd', text: "Utilizing fixed memory space", isCorrect: false }
+      { id: 'a', text: "When the array has one element", isCorrect: true },
+      { id: 'b', text: "When the pivot is chosen", isCorrect: false },
+      { id: 'c', text: "When the array is sorted", isCorrect: false },
+      { id: 'd', text: "When all elements are equal", isCorrect: false }
     ]
-  }
+  },
+  {
+    id: 11,
+    question: "What is the space complexity of Quick Sort in the average case?",
+    options: [
+      { id: 'a', text: "O(n)", isCorrect: false },
+      { id: 'b', text: "O(log n)", isCorrect: true },
+      { id: 'c', text: "O(n log n)", isCorrect: false },
+      { id: 'd', text: "O(1)", isCorrect: false }
+    ]
+  },
+  {
+    id: 12,
+    question: "Which factor can significantly impact the performance of Quick Sort?",
+    options: [
+      { id: 'a', text: "Choice of pivot", isCorrect: true },
+      { id: 'b', text: "Array size only", isCorrect: false },
+      { id: 'c', text: "Number of unique elements", isCorrect: false },
+      { id: 'd', text: "Data type of elements", isCorrect: false }
+    ]
+  },
+  {
+    id: 13,
+    question: "What does the term 'stable sort' mean?",
+    options: [
+      { id: 'a', text: "It maintains the relative order of equal elements", isCorrect: true },
+      { id: 'b', text: "It is faster than other sorts", isCorrect: false },
+      { id: 'c', text: "It uses less memory", isCorrect: false },
+      { id: 'd', text: "It can sort in reverse order", isCorrect: false }
+    ]
+  },
+  {
+    id: 14,
+    question: "How is Quick Sort generally implemented?",
+    options: [
+      { id: 'a', text: "Using a stack", isCorrect: false },
+      { id: 'b', text: "Using recursion", isCorrect: true },
+      { id: 'c', text: "Using a queue", isCorrect: false },
+      { id: 'd', text: "Using iteration only", isCorrect: false }
+    ]
+  },
+  {
+    id: 15,
+    question: "What happens if the pivot is chosen poorly in Quick Sort?",
+    options: [
+      { id: 'a', text: "It will still sort correctly", isCorrect: false },
+      { id: 'b', text: "It can lead to O(n^2) performance", isCorrect: true },
+      { id: 'c', text: "It will improve performance", isCorrect: false },
+      { id: 'd', text: "It will not affect the outcome", isCorrect: false }
+    ]
+  },
 ];
+
 
 const shuffleArray = (array) => {
   let shuffled = array.slice(); 
