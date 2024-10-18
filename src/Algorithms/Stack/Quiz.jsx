@@ -4,105 +4,152 @@ import '../Quiz.css';
 const questions = [
   {
     id: 1,
-    question: "What is the main goal of double hashing in DSA?",
+    question: "What is the primary function of a stack data structure?",
     options: [
-      { id: 'a', text: "To reduce time complexity", isCorrect: false },
-      { id: 'b', text: "To avoid collisions", isCorrect: true },
-      { id: 'c', text: "To optimize space usage", isCorrect: false },
-      { id: 'd', text: "To increase memory usage", isCorrect: false }
+      { id: 'a', text: "FIFO (First In First Out)", isCorrect: false },
+      { id: 'b', text: "LIFO (Last In First Out)", isCorrect: true },
+      { id: 'c', text: "Random access", isCorrect: false },
+      { id: 'd', text: "Priority based", isCorrect: false }
     ]
   },
   {
     id: 2,
-    question: "Double hashing uses how many hash functions?",
+    question: "Which of the following operations is NOT performed on a stack?",
     options: [
-      { id: 'a', text: "1", isCorrect: false },
-      { id: 'b', text: "2", isCorrect: true },
-      { id: 'c', text: "3", isCorrect: false },
-      { id: 'd', text: "4", isCorrect: false }
+      { id: 'a', text: "Push", isCorrect: false },
+      { id: 'b', text: "Pop", isCorrect: false },
+      { id: 'c', text: "Peek", isCorrect: false },
+      { id: 'd', text: "Shift", isCorrect: true }
     ]
   },
   {
     id: 3,
-    question: "What is the formula for double hashing?",
+    question: "What does the 'peek' operation do in a stack?",
     options: [
-      { id: 'a', text: "h(key) = (h1(key) + h2(key)) % table_size", isCorrect: false },
-      { id: 'b', text: "h(key) = (h1(key) + i * h2(key)) % table_size", isCorrect: true },
-      { id: 'c', text: "h(key) = (h1(key) * h2(key)) % table_size", isCorrect: false },
-      { id: 'd', text: "h(key) = (h1(key) + i * h1(key)) % table_size", isCorrect: false }
+      { id: 'a', text: "Removes the top element", isCorrect: false },
+      { id: 'b', text: "Returns the top element without removing it", isCorrect: true },
+      { id: 'c', text: "Adds an element to the top", isCorrect: false },
+      { id: 'd', text: "Checks if the stack is empty", isCorrect: false }
     ]
   },
   {
     id: 4,
-    question: "What is a key benefit of double hashing?",
+    question: "What is a common use case for a stack?",
     options: [
-      { id: 'a', text: "It provides better clustering", isCorrect: false },
-      { id: 'b', text: "It provides efficient memory allocation", isCorrect: false },
-      { id: 'c', text: "It reduces clustering", isCorrect: true },
-      { id: 'd', text: "It reduces the need for rehashing", isCorrect: false }
+      { id: 'a', text: "Managing function calls in recursion", isCorrect: true },
+      { id: 'b', text: "Storing items in a queue", isCorrect: false },
+      { id: 'c', text: "Sorting data", isCorrect: false },
+      { id: 'd', text: "Searching elements", isCorrect: false }
     ]
   },
   {
     id: 5,
-    question: "In double hashing, the second hash function should be chosen such that it is:",
+    question: "What happens when you pop an element from an empty stack?",
     options: [
-      { id: 'a', text: "Divisible by the table size", isCorrect: false },
-      { id: 'b', text: "A power of 2", isCorrect: false },
-      { id: 'c', text: "Relatively prime to the table size", isCorrect: true },
-      { id: 'd', text: "Smaller than the table size", isCorrect: false }
+      { id: 'a', text: "Returns null", isCorrect: false },
+      { id: 'b', text: "Throws an error", isCorrect: true },
+      { id: 'c', text: "Returns the last element", isCorrect: false },
+      { id: 'd', text: "Remains unchanged", isCorrect: false }
     ]
   },
   {
     id: 6,
-    question: "What is the time complexity of double hashing?",
+    question: "How can you implement a stack using an array?",
     options: [
-      { id: 'a', text: "O(n)", isCorrect: false },
-      { id: 'b', text: "O(1)", isCorrect: true },
+      { id: 'a', text: "Using a fixed size array", isCorrect: true },
+      { id: 'b', text: "Using a linked list only", isCorrect: false },
+      { id: 'c', text: "Using a queue", isCorrect: false },
+      { id: 'd', text: "Using a hash table", isCorrect: false }
+    ]
+  },
+  {
+    id: 7,
+    question: "In what time complexity does the push operation run in a stack?",
+    options: [
+      { id: 'a', text: "O(1)", isCorrect: true },
+      { id: 'b', text: "O(n)", isCorrect: false },
       { id: 'c', text: "O(log n)", isCorrect: false },
       { id: 'd', text: "O(n^2)", isCorrect: false }
     ]
   },
   {
-    id: 7,
-    question: "What is the primary reason for using double hashing over linear probing?",
-    options: [
-      { id: 'a', text: "It speeds up insertion", isCorrect: false },
-      { id: 'b', text: "It reduces clustering", isCorrect: true },
-      { id: 'c', text: "It increases memory efficiency", isCorrect: false },
-      { id: 'd', text: "It reduces time complexity", isCorrect: false }
-    ]
-  },
-  
-  {
     id: 8,
-    question: "Which of the following is a requirement for the second hash function in double hashing?",
+    question: "Which of the following describes a stack overflow?",
     options: [
-      { id: 'a', text: "It must return a constant value", isCorrect: false },
-      { id: 'b', text: "It must return an even number", isCorrect: false },
-      { id: 'c', text: "It must be independent of the first hash function", isCorrect: true },
-      { id: 'd', text: "It must be equal to the table size", isCorrect: false }
+      { id: 'a', text: "Adding elements until the stack is empty", isCorrect: false },
+      { id: 'b', text: "Removing elements until the stack is empty", isCorrect: false },
+      { id: 'c', text: "Attempting to push an element onto a full stack", isCorrect: true },
+      { id: 'd', text: "Popping elements without adding any", isCorrect: false }
     ]
   },
-  
   {
     id: 9,
-    question: "What happens if the second hash function in double hashing is not relatively prime to the table size?",
+    question: "Which of the following is an example of stack applications?",
     options: [
-      { id: 'a', text: "It will result in fewer probes", isCorrect: false },
-      { id: 'b', text: "It will result in the same performance as linear probing", isCorrect: true },
-      { id: 'c', text: "It will optimize space usage", isCorrect: false },
-      { id: 'd', text: "It will reduce time complexity", isCorrect: false }
+      { id: 'a', text: "Undo functionality in applications", isCorrect: true },
+      { id: 'b', text: "Web page navigation", isCorrect: false },
+      { id: 'c', text: "Database transactions", isCorrect: false },
+      { id: 'd', text: "Event handling in GUI", isCorrect: false }
     ]
   },
-  
   {
     id: 10,
-    question: "Double hashing helps minimize collisions by:",
+    question: "How do you check if a stack is empty?",
     options: [
-      { id: 'a', text: "Generating two random hash values", isCorrect: false },
-      { id: 'b', text: "Using two different hash functions for probing", isCorrect: true },
-      { id: 'c', text: "Avoiding rehashing", isCorrect: false },
-      { id: 'd', text: "Utilizing fixed memory space", isCorrect: false }
+      { id: 'a', text: "Check if the top element is null", isCorrect: true },
+      { id: 'b', text: "Count the elements", isCorrect: false },
+      { id: 'c', text: "Use the pop operation", isCorrect: false },
+      { id: 'd', text: "Use the peek operation", isCorrect: false }
+    ]
+  },
+  {
+    id: 11,
+    question: "What is a stack's maximum size determined by?",
+    options: [
+      { id: 'a', text: "The number of elements pushed", isCorrect: false },
+      { id: 'b', text: "The array size or linked list nodes", isCorrect: true },
+      { id: 'c', text: "The pop operations performed", isCorrect: false },
+      { id: 'd', text: "The programming language used", isCorrect: false }
+    ]
+  },
+  {
+    id: 12,
+    question: "Which of the following is a property of stack data structure?",
+    options: [
+      { id: 'a', text: "Elements can be accessed randomly", isCorrect: false },
+      { id: 'b', text: "Last element added is the first one to be removed", isCorrect: true },
+      { id: 'c', text: "Elements can be added in the middle", isCorrect: false },
+      { id: 'd', text: "All operations are O(n)", isCorrect: false }
+    ]
+  },
+  {
+    id: 13,
+    question: "What does the term 'backtracking' in algorithms often involve?",
+    options: [
+      { id: 'a', text: "Using a stack to store state", isCorrect: true },
+      { id: 'b', text: "Using a queue for search", isCorrect: false },
+      { id: 'c', text: "Sorting elements", isCorrect: false },
+      { id: 'd', text: "Direct access memory", isCorrect: false }
+    ]
+  },
+  {
+    id: 14,
+    question: "Which algorithm uses a stack to solve the problem of balancing parentheses?",
+    options: [
+      { id: 'a', text: "Breadth-first search", isCorrect: false },
+      { id: 'b', text: "Depth-first search", isCorrect: true },
+      { id: 'c', text: "Dijkstra's algorithm", isCorrect: false },
+      { id: 'd', text: "Binary search", isCorrect: false }
+    ]
+  },
+  {
+    id: 15,
+    question: "What is the space complexity of using a stack implemented with an array?",
+    options: [
+      { id: 'a', text: "O(1)", isCorrect: false },
+      { id: 'b', text: "O(n)", isCorrect: true },
+      { id: 'c', text: "O(log n)", isCorrect: false },
+      { id: 'd', text: "O(n^2)", isCorrect: false }
     ]
   }
 ];
@@ -123,7 +170,7 @@ const Quiz = () => {
 
   const selectRandomQuestions = useCallback(() => {
     const shuffled = shuffleArray(questions);
-    return shuffled.slice(0, 5);
+    return shuffled.slice(0, 5); // You can adjust this number if you want to display more or fewer questions
   }, []);
 
   useEffect(() => {
@@ -193,4 +240,3 @@ const Quiz = () => {
 };
 
 export default Quiz;
-
