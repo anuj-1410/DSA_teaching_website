@@ -56,7 +56,7 @@ const Demo = () => {
     return (
         <div className="containerstack">
             <header className='headerstack'>
-                <h1 className="heading">Code Matrix</h1>
+                
                 <h3 className="title">Stack Visualizer</h3>
             </header>
 

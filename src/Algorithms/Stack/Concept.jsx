@@ -1,57 +1,19 @@
 import React from 'react';
-
+import stackimg from './stackimg.png';
 
 const Concept = () => {
-  const styles = {
-    container: {
-      padding: '20px',
-      maxWidth: '800px',
-      margin: '0 auto',
-      fontFamily: 'Arial, sans-serif',
-      lineHeight: '1.6',
-      color: '#333',
-    },
-    heading: {
-      textAlign: 'center',
-      color: '#2c3e50',
-    },
-    subheading: {
-      marginTop: '20px',
-      color: '#2980b9',
-    },
-    codeBlock: {
-      backgroundColor: '#f4f4f4',
-      padding: '10px',
-      borderRadius: '5px',
-      overflowX: 'auto',
-      fontFamily: 'monospace',
-      whiteSpace: 'pre',
-      lineHeight: '1.5',
-    },
-    list: {
-      listStyleType: 'disc',
-      marginLeft: '20px',
-    },
-    image: {
-      display: 'block',
-      margin: '20px auto',
-      maxWidth: '100%', // Ensures responsiveness
-      height: 'auto', // Maintains aspect ratio
-    },
-  };
-
   return (
-    <div style={styles.container}>
-      <h1 style={styles.heading}>Understanding Stack Data Structure in C (Using Array)</h1>
+    <div style={{fontSize:"1.3rem", margin:"0 50px"}}>
+      <h1>Understanding Stack Data Structure in C (Using Array)</h1>
       
-      <h2 style={styles.subheading}>What is a Stack?</h2>
+      <h2>What is a Stack?</h2>
       <p>
         A Stack is a linear data structure that follows the Last In, First Out (LIFO) principle. The last element added to the stack is the first one to be removed. Stacks are commonly used in scenarios such as function call management, expression evaluation, and backtracking algorithms.
       </p>
       
-      <h2 style={styles.subheading}>Basic Operations</h2>
+      <h2>Basic Operations</h2>
       <p>The primary operations of a stack include:</p>
-      <ul style={styles.list}>
+      <ul>
         <li><strong>Push:</strong> Adds an element to the top of the stack.</li>
         <li><strong>Pop:</strong> Removes the top element from the stack.</li>
         <li><strong>Peek:</strong> Returns the top element without removing it.</li>
@@ -59,11 +21,13 @@ const Concept = () => {
         <li><strong>Size:</strong> Returns the number of elements in the stack.</li>
       </ul>
 
+      <img src={stackimg} alt="None" />
 
-      <h2 style={styles.subheading}>Stack Implementation in C (Using Array)</h2>
+
+      <h2>Stack Implementation in C (Using Array)</h2>
       <p>Below is a simple implementation of a stack using an array in C:</p>
       
-      <div style={styles.codeBlock}>
+      <pre>
         {`#include <stdio.h>
 #include <stdlib.h>
 
@@ -140,10 +104,10 @@ int main() {
     freeStack(stack);
     return 0;
 }`}
-      </div>
+      </pre>
 
-      <h2 style={styles.subheading}>Function Explanations and Algorithms</h2>
-      <ul style={styles.list}>
+      <h2>Function Explanations and Algorithms</h2>
+      <ul>
         <li>
           <strong>createStack:</strong>
           <p>Initializes a new stack by allocating memory for the stack structure and setting the top index to -1.</p>
@@ -211,12 +175,7 @@ int main() {
           </p>
         </li>
       </ul>
-
       
-      <h2 style={styles.subheading}>Conclusion</h2>
-      <p>
-        Understanding stacks is fundamental for mastering data structures and algorithms. They provide efficient solutions to many programming problems. By practicing stack operations and their applications, you can improve your problem-solving skills and prepare for more advanced topics in computer science.
-      </p>
     </div>
   );
 };
