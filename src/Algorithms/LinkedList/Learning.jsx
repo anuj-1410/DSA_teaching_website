@@ -5,7 +5,7 @@ import doublelinkedlist from './Node-Structure-of-Doubly-Linked-List.png';
 
 
 const Learning = () => {
-    const videoUrl = "https://youtu.be/QXum8HQd_l4?feature=shared";
+    const videoUrl = "https://youtu.be/e9NG_a6Z0mg?si=bI9XikSOqIYDbYN1";
 
     return (
         <div style={{fontSize:"1.3rem", margin:"0 50px"}}>
