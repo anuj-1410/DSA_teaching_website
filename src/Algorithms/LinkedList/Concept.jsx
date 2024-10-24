@@ -42,9 +42,9 @@ const Concept = () => {
             </div>
            <p>To insert a new node at the beginning of the doubly list, we can use the following steps:</p>
            <ul>
-            <li>Create a new node, say new_node with the given data and set its previous pointer to null, new_node->prev = NULL.</li>
-            <li>Set the next pointer of new_node to current head, new_node->next = head.</li>
-            <li>If the linked list is not empty, update the previous pointer of the current head to new_node, head->prev = new_node.</li>
+            <li>Create a new node, say new_node with the given data and set its previous pointer to null, new_node--prev = NULL.</li>
+            <li>Set the next pointer of new_node to current head, new_node--next = head.</li>
+            <li>If the linked list is not empty, update the previous pointer of the current head to new_node, head--prev = new_node.</li>
             <li>Return new_node as the head of the updated linked list.</li>
            </ul>
            <h2>Insertion at the End of Doubly Linked List</h2>
@@ -79,9 +79,9 @@ const Concept = () => {
                 <li>If position = 1, create a new node and make it the head of the linked list and return it.</li>
                 <li>Otherwise, traverse the list to reach the node at position – 1, say curr.</li>
                 <li>If the position is valid, create a new node with given data, say new_node.</li>
-                <li>Update the next pointer of new node to the next of current node and prev pointer of new node to current node, new_node->next = curr->next and new_node->prev = curr.</li>
-                <li>Similarly, update next pointer of current node to the new node, curr->next = new_node.</li>
-                <li>If the new node is not the last node, update prev pointer of new node’s next to the new node, new_node->next->prev = new_node.</li>
+                <li>Update the next pointer of new node to the next of current node and prev pointer of new node to current node, new_node--next = curr--next and new_node--prev = curr.</li>
+                <li>Similarly, update next pointer of current node to the new node, curr--next = new_node.</li>
+                <li>If the new node is not the last node, update prev pointer of new node’s next to the new node, new_node--next--prev = new_node.</li>
                
             </ul>
             <h2>Deletion at the Beginning of Doubly Linked List</h2>
@@ -92,8 +92,8 @@ const Concept = () => {
             <ul>
                 <li>Check if the list is empty, there is nothing to delete. Return.</li>
                 <li>Store the head pointer in a variable, say temp.</li>
-                <li>Update the head of linked list to the node next to the current head, head = head->next.</li>
-                <li>If the new head is not NULL, update the previous pointer of new head to NULL, head->prev = NULL.</li>
+                <li>Update the head of linked list to the node next to the current head, head = head--next.</li>
+                <li>If the new head is not NULL, update the previous pointer of new head to NULL, head--prev = NULL.</li>
             </ul>
             <h2>Deletion at the End of Doubly Linked List</h2>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -103,7 +103,7 @@ const Concept = () => {
             <ul>
                 <li>Check if the doubly linked list is empty. If it is empty, then there is nothing to delete.</li>
                 <li>If the list is not empty, then move to the last node of the doubly linked list, say curr.</li>
-                <li>Update the second-to-last node’s next pointer to NULL, curr->prev->next = NULL.</li>
+                <li>Update the second-to-last node’s next pointer to NULL, curr--prev--next = NULL.</li>
                 <li>Free the memory allocated for the node that was deleted.</li>
             </ul>
             <h2>Deletion at a Specific Position in Doubly Linked List</h2>
@@ -115,8 +115,8 @@ const Concept = () => {
                 <li>Traverse to the node at the specified position, say curr.</li>
                 <li>If the position is valid, adjust the pointers to skip the node to be deleted.</li>
                 <ul>
-                    <li>If curr is not the head of the linked list, update the next pointer of the node before curr to point to the node after curr, curr->prev->next = curr-next.</li>
-                    <li>If curr is not the last node of the linked list, update the previous pointer of the node after curr to the node before curr, curr->next->prev = curr->prev.</li>
+                    <li>If curr is not the head of the linked list, update the next pointer of the node before curr to point to the node after curr, curr--prev--next = curr-next.</li>
+                    <li>If curr is not the last node of the linked list, update the previous pointer of the node after curr to the node before curr, curr--next--prev = curr--prev.</li>
 
                 </ul>
             <li>Free the memory allocated for the deleted node.</li>
