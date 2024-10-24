@@ -18,6 +18,12 @@ body {
     --border-quiz :1px solid #ddd;
     --quiz-selected : #1B4965;
     --navbar-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --sort-demo : white;
+    --about-bg : #aceeee;
+    --about-button : #dbf8fb;
+    --contact-bg : #dbf8fb;
+    --contact-button : #aceeee;
+    --contact-submit :#00607A ;
     padding: 0;
     margin: 0;
     background-color: var(--background-color);
@@ -41,6 +47,12 @@ body.dark {
     --border-quiz :1px solid #00607A;
     --quiz-selected : #BEE9E8;
     --navbar-shadow: #004052 0px 1px 4px;
+    --sort-demo : black;
+    --about-bg : #081218;
+    --about-button : #004052;
+    --contact-bg : #002029;
+    --contact-button : #004052;
+    --contact-submit : #aceeee;
     background-color: var(--background-color);
     color: var(--text-color);
 }

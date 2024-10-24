@@ -73,7 +73,7 @@ const AboutUs = () => {
         <div className='contact-info'>
           <div className='contact-row'>
             <FontAwesomeIcon icon={faMapMarkerAlt} /> 
-            <a href="https://maps.app.goo.gl/NpKtgtKwQR3iETRW7" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: '#000', marginLeft: '5px' }}>
+            <a href="https://maps.app.goo.gl/NpKtgtKwQR3iETRW7" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', marginLeft: '5px' }}>
               Address: Shri Ramdeobaba College of Engineering and Management, Katol Rd, Lonand, Gittikhadan, Nagpur, Maharashtra 440013, India
             </a>
           </div>

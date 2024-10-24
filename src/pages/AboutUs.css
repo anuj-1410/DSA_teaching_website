@@ -1,6 +1,6 @@
 /* AboutUs.css */
 .mainmaincontainer {
-    background-color: #f0f8ff;
+    background-color: var(--background-color);
     font-family: Arial, sans-serif;
     margin: 0;
     margin-top: 60px;
@@ -13,15 +13,14 @@
     .about-us-section {
       flex: 62%;
       padding: 20px;
-      background-color: #aceeee;
-      color: rgb(0, 0, 0);
+      background-color: var(--about-bg);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
     
     .about-us-heading {
-      background-color:  #dbf8fb;
+      background-color: var(--about-button);
       padding: 20px;
       border-radius: 8px;
       width: 30%;
@@ -40,7 +39,7 @@
       margin-bottom: 20px;
       opacity: 0;
       animation: fadeInUp 2s forwards; /* Animate appearance */
-      background-color:  #dbf8fb; /* Dark blue background */
+      background-color:  var(--about-button); /* Dark blue background */
       padding: 20px;
       border-radius: 8px; /* Rounded corners */
       margin-bottom: 20px; /* Space below the header */
@@ -49,7 +48,7 @@
     }
     
     .team {
-      background-color:  #dbf8fb; /* Dark blue background */
+      background-color:  var(--about-button); /* Dark blue background */
       padding: 20px;
       border-radius: 8px;
       margin-bottom: 20px;
@@ -73,8 +72,7 @@
     .contactus-section {
       flex: 38%;
       padding: 20px;
-      background-color: #dbf8fb; /* Lighter blue for contrast */
-      color: #000000; /* Text color */
+      background-color: var(--contact-bg); /* Lighter blue for contrast */
       display: flex;
       flex-direction: column;
       align-items: flex-start; /* Align items to the left */
@@ -87,7 +85,7 @@
     }
     
     .contactus-heading {
-      background-color: #aceeee; /* Dark blue background */
+      background-color: var(--contact-button); /* Dark blue background */
       padding: 20px;
       border-radius: 8px; /* Rounded corners */
       width: 40%; /* Full width */
@@ -130,7 +128,7 @@
     }
     
     .contact-info {
-      background-color: #dbf8fb; /* Lighter blue for the box */
+      background-color: var(--contact-button); /* Lighter blue for the box */
       padding: 30px;
       border-radius: 15px; /* Rounded corners */
       margin-top: 20px; /* Space above the box */
@@ -151,12 +149,8 @@
     }
     
     .contact-row a {
-      color: #389481; /* Default color */
-      text-decoration: none; /* Remove underline */
-    }
-    
-    .contact-row a:hover {
-      color: darkblue; /* Change color on hover */
+      text-decoration: none;
+      color: var(--text-color); 
     }
     
     

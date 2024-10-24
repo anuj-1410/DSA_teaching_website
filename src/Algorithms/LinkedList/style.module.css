@@ -22,14 +22,14 @@ canvas {
     justify-content: space-between; 
 }
 
-input {
+.valueList, .indexList {
     padding: 10px;
     margin: 5px;
     width: 110px;
     box-sizing: border-box; 
 }
 
-button {
+.buttonList {
     padding: 10px;
     margin: 5px 10px;
     background-color: #007bff;
@@ -39,11 +39,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.buttonList:hover {
     background-color: #0056b3;
 }
 
-p {
+.paraList {
     font-weight: bold;
     color: black; 
 }

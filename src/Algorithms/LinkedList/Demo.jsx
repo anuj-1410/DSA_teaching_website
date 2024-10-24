@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './style.module.css'; // Import the CSS file
+import React, { useEffect, useRef, useState, useCallback } from 'react';
+import styles from './style.module.css'; // Import the CSS module file
 
 const Demo = () => {
     const canvasRef = useRef(null);
@@ -8,13 +8,7 @@ const Demo = () => {
     const [index, setIndex] = useState('');
     const [message, setMessage] = useState('');
 
-    useEffect(() => {
-        const canvas = canvasRef.current;
-        const ctx = canvas.getContext('2d');
-        drawLinkedList(ctx);
-    }, [numbers]);
-
-    const drawLinkedList = (ctx) => {
+    const drawLinkedList = useCallback((ctx) => {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         numbers.forEach((num, i) => {
             ctx.fillStyle = 'blue';
@@ -22,11 +16,16 @@ const Demo = () => {
             ctx.fillStyle = 'white';
             ctx.fillText(num, 30 + i * 50, 45);
         });
-        
         ctx.fillStyle = 'black';
         ctx.font = 'bold 25px Arial';
         ctx.fillText("Null", 20 + numbers.length * 50, 47);
-    };
+    }, [numbers]);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext('2d');
+        drawLinkedList(ctx);
+    }, [numbers, drawLinkedList]);
 
     const insertAtHead = () => {
         if (numbers.length < 7) {
@@ -106,19 +105,19 @@ const Demo = () => {
     };
 
     return (
-        <div className="container">
+        <div className={styles.container}>
             <canvas ref={canvasRef} width={600} height={100} />
-            <div className="inputvalue">
-                <div className="inputContainer">
+            <div className={styles.inputvalue}>
+                <div className={styles.inputContainer}>
                     <input
-                        className="value"
+                        className={styles.valueList}
                         type="text"
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
                         placeholder="Value"
                     />
                     <input
-                        className="index"
+                        className={styles.indexList}
                         type="number"
                         value={index}
                         onChange={(e) => setIndex(e.target.value)}
@@ -127,15 +126,15 @@ const Demo = () => {
                 </div>
             </div>
             <div>
-                <button onClick={insertAtHead}>Insert At Head</button>
-                <button onClick={insertAtTail}>Insert At Tail</button>
-                <button onClick={insertAtNode}>Insert At Node</button>
-                <button onClick={searchNumber}>Search</button>
-                <button onClick={removeFromHead}>Remove From Head</button>
-                <button onClick={removeFromTail}>Remove From Tail</button>
-                <button onClick={removeAtNode}>Remove From Index</button>
+                <button className={styles.buttonList} onClick={insertAtHead}>Insert At Head</button>
+                <button className={styles.buttonList} onClick={insertAtTail}>Insert At Tail</button>
+                <button className={styles.buttonList} onClick={insertAtNode}>Insert At Node</button>
+                <button className={styles.buttonList} onClick={searchNumber}>Search</button>
+                <button className={styles.buttonList} onClick={removeFromHead}>Remove From Head</button>
+                <button className={styles.buttonList} onClick={removeFromTail}>Remove From Tail</button>
+                <button className={styles.buttonList} onClick={removeAtNode}>Remove From Index</button>
             </div>
-            <p style={{ color: 'black' }}>{message}</p>
+            <p className={styles.paraList} style={{ color: 'black' }}>{message}</p>
         </div>
     );
 };

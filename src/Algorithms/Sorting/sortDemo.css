@@ -1,0 +1,91 @@
+.outer-sort{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.sortAnimation{
+    margin-top: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.array, .arrowUp, .arrowDown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sqr{
+    height: 50px;
+    width: 50px;
+    border: 3px solid var(--text-color);
+    border-radius: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sqr-legend{
+    height: 20px;
+    width: 20px;
+    border: 3px solid var(--text-color);
+    margin-right: 20px;
+}
+.color-legend{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sqr-arrow{
+    height: 50px;
+    width: 50px;
+    border: 3px solid var(--sort-demo);
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+.legends{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    margin: 0 150px 0 50px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--button-color);
+}
+.button-sort{
+    height: 40px;
+    width: 80px;
+    border: none;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 30px;
+    transition: scale 0.3s ease;
+}
+.button-sort:hover{
+    scale: 1.1;
+}
+.buttons-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents-sort{
+    margin-bottom: 70px;
+}
+.content-size{
+    height: 150px;
+    width: 550px;
+    border-radius: 20px;
+    background-color: var(--button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -5,7 +5,7 @@ const Aim = () => {
         <div style={{fontSize:"1.5rem", margin:"0 50px"}}>
             <h1 style={{textAlign:"center", marginBottom:"30px"}}>Quick Sort Algorithm</h1>
             <h2>Estimated Time</h2>
-            <p>25 minutes</p>
+            <p>1 hour</p>
             <h2>Learning Objectives of this Module</h2>
             <p>In this module, we will: </p>
             <ul>

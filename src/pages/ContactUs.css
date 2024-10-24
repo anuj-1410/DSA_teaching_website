@@ -23,9 +23,8 @@
       width: 150%; /* Ensure responsiveness */
       margin: 20px;
       padding: 20px;
-      border: 1px solid #ccc;
       border-radius: 10px;
-      background-color:#aceeee; /* White background for the form */
+      background-color:var(--contact-button); /* White background for the form */
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
     
@@ -71,8 +70,8 @@
     }
     
     input[type="submit"] {
-      background-color: #afe7ee; /* Default button color */
-      color: white;
+      background-color: var(--contact-submit); /* Default button color */
+      color: var(--sort-demo);
       border: none;
       padding: 10px 20px;
       cursor: pointer;
