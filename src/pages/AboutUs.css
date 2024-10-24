@@ -1,19 +1,14 @@
 /* AboutUs.css */
 .mainmaincontainer {
-    background-color: var(--background-color);
     font-family: Arial, sans-serif;
     margin: 0;
-    margin-top: 60px;
+    display: flex;
+    height: 92vh;
 }
-    .main-container {
-      display: flex;
-      height: 100vh;
-    }
-    
     .about-us-section {
       flex: 62%;
-      padding: 20px;
-      background-color: var(--about-bg);
+      margin-top: 60px;
+      padding: 0 0 0 20px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -21,10 +16,10 @@
     
     .about-us-heading {
       background-color: var(--about-button);
-      padding: 20px;
+      padding: 10px;
       border-radius: 8px;
       width: 30%;
-      height: 3.5%;
+      margin-top: 20px;
       margin-bottom: 20px;
       font-size: 2em;
       font-weight: bold;
@@ -36,13 +31,11 @@
     }
     
     .educate-line {
-      margin-bottom: 20px;
       opacity: 0;
       animation: fadeInUp 2s forwards; /* Animate appearance */
       background-color:  var(--about-button); /* Dark blue background */
       padding: 20px;
       border-radius: 8px; /* Rounded corners */
-      margin-bottom: 20px; /* Space below the header */
       font-size: 1em;
       font-weight: bold;
     }
@@ -51,7 +44,6 @@
       background-color:  var(--about-button); /* Dark blue background */
       padding: 20px;
       border-radius: 8px;
-      margin-bottom: 20px;
       font-size: 1.5em;
       font-weight: bold;
     }
@@ -64,7 +56,6 @@
     
     .content {
       text-align: left; /* Align text to the left */
-      margin-bottom: 40px;
       font-size: 1em;
       font-weight: bold;
     }
@@ -72,9 +63,11 @@
     .contactus-section {
       flex: 38%;
       padding: 20px;
+      margin-top: 60px;
       background-color: var(--contact-bg); /* Lighter blue for contrast */
       display: flex;
       flex-direction: column;
+      height: 94.5%;
       align-items: flex-start; /* Align items to the left */
     }
     
@@ -129,7 +122,7 @@
     
     .contact-info {
       background-color: var(--contact-button); /* Lighter blue for the box */
-      padding: 30px;
+      padding: 20px;
       border-radius: 15px; /* Rounded corners */
       margin-top: 20px; /* Space above the box */
       border: 1px solid rgb(41, 224, 221); /* Black border */
@@ -139,7 +132,7 @@
     
     .contact-row {
       border-bottom: 1px solid rgb(61, 222, 225); /* Border between rows */
-      padding: 10px 0; /* Padding above and below each row */
+      padding:2px; /* Padding above and below each row */
       display: flex; /* Flex display for icon and text */
       align-items: center; /* Center items vertically */
     }

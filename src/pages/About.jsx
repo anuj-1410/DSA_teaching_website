@@ -17,7 +17,6 @@ const AboutUs = () => {
 
   return (
     <div className='mainmaincontainer'>
-    <div className='main-container'>
       <div className="about-us-section">
         <div className="about-us-heading">About Us</div>
         <div className="educate-line">• EDUCATE • ENABLE • EMPOWER</div>
@@ -89,7 +88,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

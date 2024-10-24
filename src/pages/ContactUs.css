@@ -1,27 +1,11 @@
 /* ContactUs.css */
 
-
-.form-container {
-    /* All your styles here will apply only when inside this container */
-  
-  
-  
-  body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 80vh; /* Full height for centering */
-      margin: 0; /* Remove default body margin */
-      background-color: #f0f0f0; /* Light background color */
-      
-    }
-  }
     form {
       display: flex;
       flex-direction: column;
       max-width: 450px;
       width: 150%; /* Ensure responsiveness */
-      margin: 20px;
+      margin: 0 20px 0 0;
       padding: 20px;
       border-radius: 10px;
       background-color:var(--contact-button); /* White background for the form */
@@ -36,7 +20,6 @@
     input[type="text"],
     input[type="email"],
     textarea {
-      padding: 10px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 5px;
