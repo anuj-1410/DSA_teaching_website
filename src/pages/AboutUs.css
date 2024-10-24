@@ -132,7 +132,7 @@
     
     .contact-row {
       border-bottom: 1px solid rgb(61, 222, 225); /* Border between rows */
-      padding:2px; /* Padding above and below each row */
+      padding: 10px 0; /* Padding above and below each row */
       display: flex; /* Flex display for icon and text */
       align-items: center; /* Center items vertically */
     }
@@ -143,7 +143,7 @@
     
     .contact-row a {
       text-decoration: none;
-      color: var(--text-color); 
+      color: var(--text-color);
     }
-    
+
     
