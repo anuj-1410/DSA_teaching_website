@@ -242,10 +242,10 @@ export default function Demo() {
   const handleNext = () => {
     if (currentStepIndex < steps.length) {
       steps[currentStepIndex]();
-      if(currentStepIndex===steps.length-1){
-        setContent("The array is sorted now");
-      }
       setCurrentStepIndex(currentStepIndex + 1);
+    }
+    if(currentStepIndex===steps.length){
+      setContent("The array is sorted now");
     }
   };
 
