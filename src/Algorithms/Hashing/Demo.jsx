@@ -75,8 +75,9 @@ const DoubleHashing = () => {
 
   return (
     <div className="hash-table-container">
-      <h2>Double Hashing Visualization</h2>
+      <h2 style={{ marginBottom: "20px",fontSize: "24px",color:"var(--text-color)"}}>Double Hashing Visualization</h2>
       <input
+      className="input-hash"
         type="number"
         placeholder="Enter a key and press Enter"
         onKeyDown={(e) => {
@@ -88,7 +89,7 @@ const DoubleHashing = () => {
         {table.map((val, idx) => (
           <div
             key={idx}
-            className={`cell ${idx === currentIndex ? (collision ? "collision" : "active") : ""}`}
+            className={`cell ${idx === currentIndex ? (collision ? "collision" : "active-hashing") : ""}`}
           >
             {val === null ? "-" : val}
           </div>
@@ -96,7 +97,7 @@ const DoubleHashing = () => {
       </div>
 
       {currentKey !== null && (
-        <div className="info">
+        <div className="info-hash">
           <p>
             <strong>Current Key: </strong> {currentKey}
           </p>

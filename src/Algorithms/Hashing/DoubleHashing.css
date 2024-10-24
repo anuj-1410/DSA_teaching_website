@@ -2,9 +2,10 @@
   text-align: center;
   margin-top: 20px;
   font-family: Arial, sans-serif;
+  color: black;
 }
 
-input {
+.input-hash {
   padding: 10px;
   font-size: 16px;
   margin-bottom: 20px;
@@ -31,7 +32,7 @@ input {
   transition: background-color 0.5s ease;
 }
 
-.active {
+.active-hashing {
   background-color: lightgreen;
 }
 
@@ -39,22 +40,14 @@ input {
   background-color: lightcoral;
 }
 
-.info {
+.info-hash {
   margin-top: 30px;
   padding: 10px;
   background-color: #f0f0f0;
   border-radius: 5px;
-  width: 50%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.info p {
-  font-size: 18px;
-  margin: 5px 0;
-}
 
-h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-}
