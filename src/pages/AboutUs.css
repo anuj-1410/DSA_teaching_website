@@ -1,149 +1,147 @@
 /* AboutUs.css */
 .mainmaincontainer {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    height: 92vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  height: 92vh;
 }
-    .about-us-section {
-      flex: 62%;
-      margin-top: 60px;
-      padding: 0 0 0 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    
-    .about-us-heading {
-      background-color: var(--about-button);
-      padding: 10px;
-      border-radius: 8px;
-      width: 30%;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-size: 2em;
-      font-weight: bold;
-    }
-    
-    .about-us-text {
-      font-size: 2em;
-      font-weight: bold;
-    }
-    
-    .educate-line {
-      opacity: 0;
-      animation: fadeInUp 2s forwards; /* Animate appearance */
-      background-color:  var(--about-button); /* Dark blue background */
-      padding: 20px;
-      border-radius: 8px; /* Rounded corners */
-      font-size: 1em;
-      font-weight: bold;
-    }
-    
-    .team {
-      background-color:  var(--about-button); /* Dark blue background */
-      padding: 20px;
-      border-radius: 8px;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-    
-    .teamlottie {
-      position: relative;
-      left: 450px;
-      bottom: 400px;
-    }
-    
-    .content {
-      text-align: left; /* Align text to the left */
-      font-size: 1em;
-      font-weight: bold;
-    }
-    
-    .contactus-section {
-      flex: 38%;
-      padding: 20px;
-      margin-top: 60px;
-      background-color: var(--contact-bg); /* Lighter blue for contrast */
-      display: flex;
-      flex-direction: column;
-      height: 94.5%;
-      align-items: flex-start; /* Align items to the left */
-    }
-    
-    .contactus-header {
-      display: flex;
-      align-items: center; /* Center vertically */
-      width: 100%; /* Full width */
-    }
-    
-    .contactus-heading {
-      background-color: var(--contact-button); /* Dark blue background */
-      padding: 20px;
-      border-radius: 8px; /* Rounded corners */
-      width: 40%; /* Full width */
-      margin-bottom: 20px; /* Space below the header */
-      font-size: 2em;
-      font-weight: bold;
-      margin-left: 20px;
-    }
-    
-    .email {
-      margin-top: 100px; /* Push email section to the bottom */
-      margin-left: 20px;
-    }
-    
-    .lottie-container {
-    
-      margin-left: 450px;
-    }
-    
-    /* .button-contact {
-      background-color: #ffffff;
-      color: #1e90ff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      width: 100%;
-    } */
-    
-    /* .button-contact:hover {
-      background-color: #1e90ff;
-      color: #ffffff;
-    } */
-    
-    /* Animation Keyframes */
-    @keyframes fadeInUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    
-    .contact-info {
-      background-color: var(--contact-button); /* Lighter blue for the box */
-      padding: 20px;
-      border-radius: 15px; /* Rounded corners */
-      margin-top: 20px; /* Space above the box */
-      border: 1px solid rgb(41, 224, 221); /* Black border */
-      max-width: 450px; /* Set a maximum width for the table */
-      width: 100%; /* Make it responsive */
-    }
-    
-    .contact-row {
-      border-bottom: 1px solid rgb(61, 222, 225); /* Border between rows */
-      padding: 10px 0; /* Padding above and below each row */
-      display: flex; /* Flex display for icon and text */
-      align-items: center; /* Center items vertically */
-    }
-    
-    .contact-row:last-child {
-      border-bottom: none; /* Remove border for the last row */
-    }
-    
-    .contact-row a {
-      text-decoration: none;
-      color: var(--text-color);
-    }
-
-    
+  .about-us-section {
+    flex: 62%;
+    margin-top: 60px;
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .about-us-heading {
+    background-color: var(--about-button);
+    padding: 10px;
+    border-radius: 8px;
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .about-us-text {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .educate-line {
+    opacity: 0;
+    animation: fadeInUp 2s forwards; /* Animate appearance */
+    background-color:  var(--about-button); /* Dark blue background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .team {
+    background-color:  var(--about-button); /* Dark blue background */
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .teamlottie {
+    position: relative;
+    left: 450px;
+    bottom: 400px;
+  }
+  
+  .content {
+    text-align: left; /* Align text to the left */
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .contactus-section {
+    flex: 38%;
+    padding: 20px;
+    margin-top: 60px;
+    background-color: var(--contact-bg); /* Lighter blue for contrast */
+    display: flex;
+    flex-direction: column;
+    height: 94.5%;
+    align-items: flex-start; /* Align items to the left */
+  }
+  
+  .contactus-header {
+    display: flex;
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width */
+  }
+  
+  .contactus-heading {
+    background-color: var(--contact-button); /* Dark blue background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    width: 40%; /* Full width */
+    margin-bottom: 20px; /* Space below the header */
+    font-size: 2em;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  .email {
+    margin-top: 100px; /* Push email section to the bottom */
+    margin-left: 20px;
+  }
+  
+  .lottie-container {
+  
+    margin-left: 450px;
+  }
+  
+  /* .button-contact {
+    background-color: #ffffff;
+    color: #1e90ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  } */
+  
+  /* .button-contact:hover {
+    background-color: #1e90ff;
+    color: #ffffff;
+  } */
+  
+  /* Animation Keyframes */
+  @keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .contact-info {
+    background-color: var(--contact-button); /* Lighter blue for the box */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    margin-top: 20px; /* Space above the box */
+    border: 1px solid rgb(41, 224, 221); /* Black border */
+    max-width: 450px; /* Set a maximum width for the table */
+    width: 100%; /* Make it responsive */
+  }
+  
+  .contact-row {
+    border-bottom: 1px solid rgb(61, 222, 225); /* Border between rows */
+    padding:2px; /* Padding above and below each row */
+    display: flex; /* Flex display for icon and text */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .contact-row:last-child {
+    border-bottom: none; /* Remove border for the last row */
+  }
+  
+  .contact-row a {
+    text-decoration: none;
+    color: var(--text-color); 
+  }

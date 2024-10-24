@@ -1,73 +1,73 @@
 /* ContactUs.css */
 
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 450px;
-      width: 150%; /* Ensure responsiveness */
-      margin: 0 20px 0 0;
-      padding: 20px;
-      border-radius: 10px;
-      background-color:var(--contact-button); /* White background for the form */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    label {
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    
-    input[type="text"],
-    input[type="email"],
-    textarea {
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    
-    input[type="submit"] {
-      padding: 10px;
-      background-color: #fcfcfc;
-      color: rgb(0, 0, 0);
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-    
-    input[type="submit"]:hover {
-      background-color: #0f818e;
-    }
-    
-  
-    textarea {
-      resize: vertical; /* Allows vertical resizing */
-      height: 100px; /* Default height */
-    }
-  
-    .confirmation {
-      margin-top: 10px;
-      color: green; /* Style for the confirmation message */
-    }
-    
-    input[type="submit"] {
-      background-color: var(--contact-submit); /* Default button color */
-      color: var(--sort-demo);
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    
-    input[type="submit"]:hover {
-      background-color: #0f818e; /* Color on hover */
-    }
-    
-    
-    @media (max-width: 600px) {
-      form {
-        width: 90%; /* Responsive width for smaller screens */
-      }
-    }
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  width: 150%; /* Ensure responsiveness */
+  margin: 0 20px 0 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color:var(--contact-button); /* White background for the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  background-color: #fcfcfc;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0f818e;
+}
+
+
+textarea {
+  resize: vertical; /* Allows vertical resizing */
+  height: 100px; /* Default height */
+}
+
+.confirmation {
+  margin-top: 10px;
+  color: green; /* Style for the confirmation message */
+}
+
+input[type="submit"] {
+  background-color: var(--contact-submit); /* Default button color */
+  color: var(--sort-demo);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0f818e; /* Color on hover */
+}
+
+
+@media (max-width: 600px) {
+  form {
+    width: 90%; /* Responsive width for smaller screens */
+  }
+}
