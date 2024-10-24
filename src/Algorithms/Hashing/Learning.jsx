@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayer from 'react-player';
 
 const Learning = () => {
-    const videoUrl = "https://youtu.be/HcWxaVl1TII?si=pwC7ziByDId6iTEo"; // Replace with relevant video for double hashing if available
+    const videoUrl = "https://youtu.be/HcWxaVl1TII?si=pwC7ziByDId6iTEo"; 
 
     return (
         <div style={{fontSize:"1.3rem", margin:"0 50px"}}>
