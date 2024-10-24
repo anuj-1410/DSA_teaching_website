@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
-import styles from './style.module.css'; // Import the CSS module file
+import styles from './style.module.css';
 
 const Demo = () => {
     const canvasRef = useRef(null);
@@ -11,7 +11,7 @@ const Demo = () => {
     const drawLinkedList = useCallback((ctx) => {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         numbers.forEach((num, i) => {
-            ctx.fillStyle = 'blue';
+            ctx.fillStyle = '#BEE9E8 '; // Set the color to red
             ctx.fillRect(20 + i * 50, 20, 40, 40);
             ctx.fillStyle = 'white';
             ctx.fillText(num, 30 + i * 50, 45);
@@ -134,7 +134,7 @@ const Demo = () => {
                 <button className={styles.buttonList} onClick={removeFromTail}>Remove From Tail</button>
                 <button className={styles.buttonList} onClick={removeAtNode}>Remove From Index</button>
             </div>
-            <p className={styles.paraList} style={{ color: 'black' }}>{message}</p>
+            <p className={styles.paraList}>{message}</p>
         </div>
     );
 };
