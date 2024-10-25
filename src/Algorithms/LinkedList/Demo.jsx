@@ -7,11 +7,13 @@ const Demo = () => {
     const [value, setValue] = useState('');
     const [index, setIndex] = useState('');
     const [message, setMessage] = useState('');
+    const [searchIndex, setSearchIndex] = useState(null);
+    const [checkingIndex, setCheckingIndex] = useState(null);
 
     const drawLinkedList = useCallback((ctx) => {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
         numbers.forEach((num, i) => {
-            ctx.fillStyle = '#BEE9E8 '; // Set the color to red
+            ctx.fillStyle = (searchIndex === i) ? 'green' : (checkingIndex === i) ? '#1B4965' : '#62B6CB'; 
             ctx.fillRect(20 + i * 50, 20, 40, 40);
             ctx.fillStyle = 'white';
             ctx.fillText(num, 30 + i * 50, 45);
@@ -19,37 +21,37 @@ const Demo = () => {
         ctx.fillStyle = 'black';
         ctx.font = 'bold 25px Arial';
         ctx.fillText("Null", 20 + numbers.length * 50, 47);
-    }, [numbers]);
+    }, [numbers, searchIndex, checkingIndex]);
 
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         drawLinkedList(ctx);
-    }, [numbers, drawLinkedList]);
+    }, [numbers, drawLinkedList, searchIndex, checkingIndex]);
 
     const insertAtHead = () => {
-        if (numbers.length < 7) {
+        if (numbers.length < 10) {  // Allow a maximum of 10 nodes
             setNumbers([value, ...numbers]);
             setValue('');
             setMessage("Inserted at head.");
         } else {
-            setMessage("Only 7 nodes are allowed.");
+            setMessage("Only 10 nodes are allowed.");
         }
     };
 
     const insertAtTail = () => {
-        if (numbers.length < 7) {
+        if (numbers.length < 10) {  // Allow a maximum of 10 nodes
             setNumbers([...numbers, value]);
             setValue('');
             setMessage("Inserted at tail.");
         } else {
-            setMessage("Only 7 nodes are allowed.");
+            setMessage("Only 10 nodes are allowed.");
         }
     };
 
     const insertAtNode = () => {
         const idx = parseInt(index);
-        if (idx >= 0 && idx <= numbers.length && numbers.length < 7) {
+        if (idx >= 0 && idx <= numbers.length && numbers.length < 10) {  // Allow a maximum of 10 nodes
             const newNumbers = [...numbers];
             newNumbers.splice(idx, 0, value);
             setNumbers(newNumbers);
@@ -62,13 +64,29 @@ const Demo = () => {
     };
 
     const searchNumber = () => {
-        const idx = numbers.indexOf(value);
-        if (idx !== -1) {
-            setMessage(`Value found at index ${idx}.`);
-        } else {
-            setMessage("Value not found.");
-        }
-        setValue('');
+        setSearchIndex(null); // Reset previous search results
+        setCheckingIndex(0); // Start checking from index 0
+        setMessage("Searching...");
+
+        const search = (index) => {
+            if (index < numbers.length) {
+                setCheckingIndex(index); // Highlight the current index
+
+                if (numbers[index] === value) {
+                    setSearchIndex(index);
+                    setMessage(`Value found at index ${index}.`);
+                    return; // Stop the search if found
+                }
+
+                // Check the next index after a delay
+                setTimeout(() => search(index + 1), 500);
+            } else {
+                setCheckingIndex(null); // Reset checking index
+                setMessage("Value not found.");
+            }
+        };
+
+        search(0); // Start the search
     };
 
     const removeFromHead = () => {
