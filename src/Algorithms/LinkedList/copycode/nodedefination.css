@@ -1,0 +1,220 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+}
+
+.code-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.code-container:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+pre {
+    background: #f7f9fc;
+    padding: 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.copy-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #1B4965;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.copy-button:hover {
+    background-color: #1A3D53; /* Slightly darker on hover */
+    transform: scale(1.05);
+}
+
+.copy-button:focus {
+    outline: none;
+}
+
+.copy-button:active {
+    background-color: #1A3D53;
+    transform: scale(0.95);
+}
+
+.copy-message {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #1B4965;
+}
+
+.output-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #2A7F7F;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.output-button:hover {
+    background-color: #256565; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+.output-button:focus {
+    outline: none;
+}
+
+.output-button:active {
+    background-color: #256565;
+    transform: scale(0.95);
+}
+
+.output-container {
+    margin-top: 20px;
+    border: 1px solid #e1e4e8;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.output-container h3 {
+    margin: 0;
+    color: #333;
+}
+
+.output-container pre {
+    margin: 10px 0 0;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+}
+
+.code-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.code-container:hover {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+pre {
+    background: #f7f9fc;
+    padding: 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.copy-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #1B4965;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.copy-button:hover {
+    background-color: #1A3D53; /* Slightly darker on hover */
+    transform: scale(1.05);
+}
+
+.copy-button:focus {
+    outline: none;
+}
+
+.copy-button:active {
+    background-color: #1A3D53;
+    transform: scale(0.95);
+}
+
+.copy-message {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #1B4965;
+}
+
+.output-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #1B4965;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.output-button:hover {
+    background-color: #1A3D53; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+.output-button:focus {
+    outline: none;
+}
+
+.output-button:active {
+    background-color: #1A3D53;
+    transform: scale(0.95);
+}
+
+.output-container {
+    margin-top: 20px;
+    border: 1px solid #e1e4e8;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.output-container h3 {
+    margin: 0;
+    color: #333;
+}
+
+.output-container pre {
+    margin: 10px 0 0;
+}

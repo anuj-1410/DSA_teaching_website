@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import insertionatendcopy from './Insertion-at-the-End-in-Doubly-Linked-List-copy.png';
-import doublelinkedlist from './Node-Structure-of-Doubly-Linked-List.png';
-
+import insertionatendcopy from './photoslinkedlist/Insertion-at-the-End-in-Doubly-Linked-List-copy.png';
+import doublelinkedlist from './photoslinkedlist/Node-Structure-of-Doubly-Linked-List.png';
+import NodeDefinition from './copycode/nodedefination';
 
 const Learning = () => {
     const videoUrl = "https://youtu.be/e9NG_a6Z0mg?si=bI9XikSOqIYDbYN1";
@@ -44,7 +44,9 @@ const Learning = () => {
                 <img src={doublelinkedlist} alt="Insertion at the end copy" style={{ maxWidth: '100%', height: 'auto' }} />
             </div>
             <h2>Node Definition</h2>
+            <NodeDefinition/>
             <p>Each node in a Doubly Linked List contains the data it holds, a pointer to the next node in the list, and a pointer to the previous node in the list. By linking these nodes together through the next and prev pointers, we can traverse the list in both directions (forward and backward), which is a key feature of a Doubly Linked List.</p>
+            <nodedefination/>
             <h2>Operations on Doubly Linked List</h2>
            <ul>
             <li>Traversal in Doubly Linked List</li>

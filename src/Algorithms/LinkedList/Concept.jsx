@@ -1,10 +1,18 @@
 import React from 'react';
-import deletionImageSpecficposition from './Deletion-at-a-Specific-Position-in-Doubly-Linked-List.png';
-import deletionatBeginning from './Deletion-at-the-Beginning-of-Doubly-Linked-List.png';
-import deletionatend from './Deletion-at-the-End-in-Doubly-Linked-List.png';
-import insertionatSpecificPosition from './Insertion-at-a-Specific-Position-in-Doubly-Linked-List.png';
-import insertionatBeginning from './Insertion-at-the-Beginning-in-Doubly-Linked-List.png';
-import insertionatend from './Insertion-at-the-End-in-Doubly-Linked-List.png';
+import deletionImageSpecficposition from './photoslinkedlist/Deletion-at-a-Specific-Position-in-Doubly-Linked-List.png';
+import deletionatBeginning from './photoslinkedlist/Deletion-at-the-Beginning-of-Doubly-Linked-List.png';
+import deletionatend from './photoslinkedlist/Deletion-at-the-End-in-Doubly-Linked-List.png';
+import insertionatSpecificPosition from './photoslinkedlist/Insertion-at-a-Specific-Position-in-Doubly-Linked-List.png';
+import insertionatBeginning from './photoslinkedlist/Insertion-at-the-Beginning-in-Doubly-Linked-List.png';
+import insertionatend from './photoslinkedlist/Insertion-at-the-End-in-Doubly-Linked-List.png';
+import Traversal from './copycode/Traversal';
+import FindLength from './copycode/FindingLength';
+import InsertBeginning from './copycode/InsertBeginning';
+import InsertEnd from './copycode/InsertEnd';
+import InsertSpecific from './copycode/InsertSpecific';
+import DeletionBeginning from './copycode/DeletionBeginning';
+import DeletionEnd from './copycode/DeletionEnd';
+import DeletionSpecific from './copycode/DeletionSpecific';
 
 const Concept = () => {
     return (
@@ -29,6 +37,7 @@ const Concept = () => {
                 <li>Move the pointer to the previous node.</li>
             </ul>
            </ul>
+           <Traversal/>
            <h2>Finding Length of Doubly Linked List</h2>
            <p>To find the length of doubly list, we can use the following steps:</p>
            <ul>
@@ -36,6 +45,7 @@ const Concept = () => {
             <li>Traverse through the list, counting each node visited.</li>
             <li>Return the total count of nodes as the length of the list.</li>
            </ul>
+           <FindLength/>
            <h2>Insertion at the Beginning in Doubly Linked List</h2>
            <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <img src={insertionatBeginning} alt="Insertion at the end copy" style={{ maxWidth: '100%', height: 'auto' }} />
@@ -47,6 +57,7 @@ const Concept = () => {
             <li>If the linked list is not empty, update the previous pointer of the current head to new_node, head--prev = new_node.</li>
             <li>Return new_node as the head of the updated linked list.</li>
            </ul>
+           <InsertBeginning/>
            <h2>Insertion at the End of Doubly Linked List</h2>
            <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <img src={insertionatend} alt="Insertion at the end copy" style={{ maxWidth: '100%', height: 'auto' }} />
@@ -70,6 +81,7 @@ const Concept = () => {
                     <li>Set the previous pointer of the new node to point to the last node.</li>
                 </ul>
            </ul>
+           <InsertEnd/>
            <h2>Insertion at a Specific Position in Doubly Linked List</h2>
            <p>To insert a node at a specific Position in doubly linked list, we can use the following steps:</p>
            <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -82,8 +94,8 @@ const Concept = () => {
                 <li>Update the next pointer of new node to the next of current node and prev pointer of new node to current node, new_node--next = curr--next and new_node--prev = curr.</li>
                 <li>Similarly, update next pointer of current node to the new node, curr--next = new_node.</li>
                 <li>If the new node is not the last node, update prev pointer of new node’s next to the new node, new_node--next--prev = new_node.</li>
-               
             </ul>
+            <InsertSpecific/>
             <h2>Deletion at the Beginning of Doubly Linked List</h2>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <img src={deletionatBeginning} alt="Insertion at the end copy" style={{ maxWidth: '100%', height: 'auto' }} />
@@ -95,6 +107,7 @@ const Concept = () => {
                 <li>Update the head of linked list to the node next to the current head, head = head--next.</li>
                 <li>If the new head is not NULL, update the previous pointer of new head to NULL, head--prev = NULL.</li>
             </ul>
+            <DeletionBeginning/>
             <h2>Deletion at the End of Doubly Linked List</h2>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <img src={deletionatend} alt="Insertion at the end copy" style={{ maxWidth: '100%', height: 'auto' }} />
@@ -106,6 +119,7 @@ const Concept = () => {
                 <li>Update the second-to-last node’s next pointer to NULL, curr--prev--next = NULL.</li>
                 <li>Free the memory allocated for the node that was deleted.</li>
             </ul>
+            <DeletionEnd/>
             <h2>Deletion at a Specific Position in Doubly Linked List</h2>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <img src={deletionImageSpecficposition} alt="Insertion at the end copy" style={{ maxWidth: '100%', height: 'auto' }} />
@@ -121,6 +135,7 @@ const Concept = () => {
                 </ul>
             <li>Free the memory allocated for the deleted node.</li>
             </ul>
+            <DeletionSpecific/>
             <h2>Advantages of Doubly Linked List</h2>
             <ul>
                 <li>Efficient traversal in both directions: Doubly linked lists allow for efficient traversal of the list in both directions, making it suitable for applications where frequent insertions and deletions are required.</li>
