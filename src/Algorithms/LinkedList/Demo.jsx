@@ -30,7 +30,7 @@ const Demo = () => {
     }, [numbers, drawLinkedList, searchIndex, checkingIndex]);
 
     const insertAtHead = () => {
-        if (numbers.length < 10) {  // Allow a maximum of 10 nodes
+        if (numbers.length < 10) {  
             setNumbers([value, ...numbers]);
             setValue('');
             setMessage("Inserted at head.");
@@ -40,7 +40,7 @@ const Demo = () => {
     };
 
     const insertAtTail = () => {
-        if (numbers.length < 10) {  // Allow a maximum of 10 nodes
+        if (numbers.length < 10) { 
             setNumbers([...numbers, value]);
             setValue('');
             setMessage("Inserted at tail.");
@@ -51,7 +51,7 @@ const Demo = () => {
 
     const insertAtNode = () => {
         const idx = parseInt(index);
-        if (idx >= 0 && idx <= numbers.length && numbers.length < 10) {  // Allow a maximum of 10 nodes
+        if (idx >= 0 && idx <= numbers.length && numbers.length < 10) { 
             const newNumbers = [...numbers];
             newNumbers.splice(idx, 0, value);
             setNumbers(newNumbers);
@@ -64,29 +64,29 @@ const Demo = () => {
     };
 
     const searchNumber = () => {
-        setSearchIndex(null); // Reset previous search results
-        setCheckingIndex(0); // Start checking from index 0
+        setSearchIndex(null); 
+        setCheckingIndex(0); 
         setMessage("Searching...");
 
         const search = (index) => {
             if (index < numbers.length) {
-                setCheckingIndex(index); // Highlight the current index
+                setCheckingIndex(index); 
 
                 if (numbers[index] === value) {
                     setSearchIndex(index);
                     setMessage(`Value found at index ${index}.`);
-                    return; // Stop the search if found
+                    return;
                 }
 
-                // Check the next index after a delay
+
                 setTimeout(() => search(index + 1), 500);
             } else {
-                setCheckingIndex(null); // Reset checking index
+                setCheckingIndex(null); 
                 setMessage("Value not found.");
             }
         };
 
-        search(0); // Start the search
+        search(0); 
     };
 
     const removeFromHead = () => {
