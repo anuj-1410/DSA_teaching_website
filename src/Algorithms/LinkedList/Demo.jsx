@@ -12,15 +12,79 @@ const Demo = () => {
 
     const drawLinkedList = useCallback((ctx) => {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        const spacing = 80;
+        const nodeRadius = 20;
+
         numbers.forEach((num, i) => {
-            ctx.fillStyle = (searchIndex === i) ? 'green' : (checkingIndex === i) ? '#1B4965' : '#62B6CB'; 
-            ctx.fillRect(20 + i * 50, 20, 40, 40);
+            const centerX = spacing / 2 + i * spacing;
+            const centerY = 40;
+
+            ctx.fillStyle = (i === 0) ? 'orange' : (searchIndex === i) ? 'green' : (checkingIndex === i) ? '#1B4965' : '#62B6CB';
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, nodeRadius, 0, Math.PI * 2);
+            ctx.fill();
+            
             ctx.fillStyle = 'white';
-            ctx.fillText(num, 30 + i * 50, 45);
+            ctx.font = 'bold 15px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(num, centerX, centerY);
+
+            ctx.fillStyle = 'black';
+            ctx.font = 'bold 12px Arial';
+            ctx.fillText(i, centerX, centerY - 25);
+
+            if (i < numbers.length - 1) {
+                const startX = centerX + nodeRadius;
+                const endX = centerX + spacing - nodeRadius;
+                ctx.beginPath();
+                ctx.moveTo(startX, centerY - 5); 
+                ctx.lineTo(endX, centerY - 5);
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                const headlen = 10;
+                const angle = Math.atan2(centerY - centerY, endX - startX);
+                ctx.beginPath();
+                ctx.moveTo(endX, centerY - 5); 
+                ctx.lineTo(endX - headlen * Math.cos(angle - Math.PI / 6), centerY - 5 - headlen * Math.sin(angle - Math.PI / 6));
+                ctx.lineTo(endX - headlen * Math.cos(angle + Math.PI / 6), centerY - 5 - headlen * Math.sin(angle + Math.PI / 6));
+                ctx.fillStyle = 'black';
+                ctx.fill();
+            }
+
+            if (i > 0) {
+                const startX = centerX - nodeRadius;
+                const endX = centerX - spacing + nodeRadius;
+                const startY = centerY + 10; 
+                ctx.beginPath();
+                ctx.moveTo(startX, startY);
+                ctx.lineTo(endX, startY);
+                ctx.strokeStyle = 'black';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                const headlen = 10;
+                const angle = Math.atan2(startY - startY, startX - endX);
+                ctx.beginPath();
+                ctx.moveTo(endX, startY);
+                ctx.lineTo(endX + headlen * Math.cos(angle - Math.PI / 6), startY + headlen * Math.sin(angle - Math.PI / 6));
+                ctx.lineTo(endX + headlen * Math.cos(angle + Math.PI / 6), startY + headlen * Math.sin(angle + Math.PI / 6));
+                ctx.fillStyle = 'black';
+                ctx.fill();
+            }
         });
+
         ctx.fillStyle = 'black';
         ctx.font = 'bold 25px Arial';
-        ctx.fillText("Null", 20 + numbers.length * 50, 47);
+        ctx.fillText("Null", spacing / 2 + numbers.length * spacing, 45);
+        
+        if (numbers.length > 0) {
+            ctx.fillStyle = 'black';
+            ctx.font = 'bold 15px Arial';
+            ctx.fillText("Head", spacing / 2, 40 + 30); 
+        }
     }, [numbers, searchIndex, checkingIndex]);
 
     useEffect(() => {
@@ -30,28 +94,28 @@ const Demo = () => {
     }, [numbers, drawLinkedList, searchIndex, checkingIndex]);
 
     const insertAtHead = () => {
-        if (numbers.length < 10) {  
+        if (numbers.length < 6) {  
             setNumbers([value, ...numbers]);
             setValue('');
             setMessage("Inserted at head.");
         } else {
-            setMessage("Only 10 nodes are allowed.");
+            setMessage("Only 6 nodes are allowed.");
         }
     };
 
     const insertAtTail = () => {
-        if (numbers.length < 10) { 
+        if (numbers.length < 6) { 
             setNumbers([...numbers, value]);
             setValue('');
             setMessage("Inserted at tail.");
         } else {
-            setMessage("Only 10 nodes are allowed.");
+            setMessage("Only 6 nodes are allowed.");
         }
     };
 
     const insertAtNode = () => {
         const idx = parseInt(index);
-        if (idx >= 0 && idx <= numbers.length && numbers.length < 10) { 
+        if (idx >= 0 && idx <= numbers.length && numbers.length < 6) { 
             const newNumbers = [...numbers];
             newNumbers.splice(idx, 0, value);
             setNumbers(newNumbers);
@@ -77,7 +141,6 @@ const Demo = () => {
                     setMessage(`Value found at index ${index}.`);
                     return;
                 }
-
 
                 setTimeout(() => search(index + 1), 500);
             } else {
@@ -122,6 +185,13 @@ const Demo = () => {
         }
     };
 
+    const resetList = () => {
+        setNumbers([]);
+        setValue('');
+        setIndex('');
+        setMessage("List has been reset.");
+    };
+
     return (
         <div className={styles.container}>
             <canvas ref={canvasRef} width={600} height={100} />
@@ -151,6 +221,7 @@ const Demo = () => {
                 <button className={styles.buttonList} onClick={removeFromHead}>Remove From Head</button>
                 <button className={styles.buttonList} onClick={removeFromTail}>Remove From Tail</button>
                 <button className={styles.buttonList} onClick={removeAtNode}>Remove From Index</button>
+                <button className={styles.buttonList} onClick={resetList}>Reset</button>
             </div>
             <p className={styles.paraList}>{message}</p>
         </div>
