@@ -104,27 +104,37 @@
     margin-top: 50px;
 }
 
-
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .outerbox {
         flex-direction: column;
-        align-items: center;
+        height: auto;
+        margin-top: 50px;
+        padding: 10px;
+        text-align: center;
     }
 
     .wel {
         font-size: 2rem;
+        margin: 2% 3%;
         text-align: center;
-        margin: 2% 2%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wel h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .text-home p {
+        font-size: 2rem;
+        text-align: center;
     }
 
     .animation {
         margin-top: 20px;
-    }
-
-    .aniBubble {
-        width: 100%;
-        height: auto;
     }
 
     .bubble1, .bubble2, .bubble3, .bubble4 {
@@ -132,38 +142,23 @@
         width: 40px;
     }
 
-    .bubble1:hover, .bubble2:hover, .bubble3:hover, .bubble4:hover {
-        height: 80px;
-        width: 160px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .outerbox {
-        flex-direction: row;
+    .suggestion {
+        position: static;
+        margin: 10px auto; 
+        font-size: 0.9rem;
+        text-align: center;
     }
 
-    .wel {
-        font-size: 2.5rem;
-        margin: 3% 3%;
+    .linkButton {
+        font-size: 14px;
+        padding: 5px 10px;
     }
 
-    .animation {
-        margin-top: 0;
-    }
-
-    .aniBubble {
-        width: 80%;
-        height: auto;
-    }
-
-    .bubble1, .bubble2, .bubble3, .bubble4 {
+    .getStartButton {
+        font-size: 20px; 
+        width: 150px;
         height: 50px;
-        width: 50px;
-    }
-
-    .bubble1:hover, .bubble2:hover, .bubble3:hover, .bubble4:hover {
-        height: 90px;
-        width: 180px;
+        margin-top: 20px;
+        text-align: center;
     }
 }

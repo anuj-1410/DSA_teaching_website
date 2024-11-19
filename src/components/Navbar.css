@@ -126,3 +126,54 @@ header{
     font-size: 1.2rem;
     font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+        height: 3%;
+        width:100%;
+    }
+
+    .right, .middle, .left {
+        justify-content: center;
+    }
+
+    .right p, .left p {
+        font-size: 0.9rem;
+        margin: 5px 10px;
+    }
+
+    .mode {
+        margin: 10px auto;
+        width: auto;
+    }
+
+    .icon-mode {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .middle {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .allButtons {
+        width: 80%;
+        height: auto;
+    }
+
+    .link-common {
+        font-size: 0.9rem;
+        padding: 5px 0;
+    }
+
+    .arrow {
+        font-size: 18px;
+    }
+
+    .left p {
+        font-size: 1rem;
+    }
+}
