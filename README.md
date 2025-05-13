@@ -62,6 +62,7 @@ Your app is ready to be deployed!
 
 ## Folder Structure
 
+```bash
 webapp/
 ├── public/
 │ ├── favicon.ico
@@ -86,6 +87,7 @@ webapp/
 │ └── ...
 ├── package.json
 └── [README.md]
+```
 
 ## Usage
 
